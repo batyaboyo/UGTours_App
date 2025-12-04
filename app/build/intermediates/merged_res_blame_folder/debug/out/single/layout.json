@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "com.ugtours.app-mergeDebugResources-49:/layout/item_feature.xml",
+        "source": "com.ugtours.app-main-52:/layout/item_feature.xml"
+    },
+    {
+        "merged": "com.ugtours.app-mergeDebugResources-49:/layout/fragment_login.xml",
+        "source": "com.ugtours.app-main-52:/layout/fragment_login.xml"
+    },
+    {
+        "merged": "com.ugtours.app-mergeDebugResources-49:/layout/fragment_profile.xml",
+        "source": "com.ugtours.app-main-52:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "com.ugtours.app-mergeDebugResources-49:/layout/item_attraction.xml",
+        "source": "com.ugtours.app-main-52:/layout/item_attraction.xml"
+    },
+    {
+        "merged": "com.ugtours.app-mergeDebugResources-49:/layout/activity_attraction_detail.xml",
+        "source": "com.ugtours.app-main-52:/layout/activity_attraction_detail.xml"
+    },
+    {
+        "merged": "com.ugtours.app-mergeDebugResources-49:/layout/item_accommodation.xml",
+        "source": "com.ugtours.app-main-52:/layout/item_accommodation.xml"
+    },
+    {
+        "merged": "com.ugtours.app-mergeDebugResources-49:/layout/fragment_favorites.xml",
+        "source": "com.ugtours.app-main-52:/layout/fragment_favorites.xml"
+    },
+    {
+        "merged": "com.ugtours.app-mergeDebugResources-49:/layout/activity_main.xml",
+        "source": "com.ugtours.app-main-52:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.ugtours.app-mergeDebugResources-49:/layout/item_category.xml",
+        "source": "com.ugtours.app-main-52:/layout/item_category.xml"
+    },
+    {
+        "merged": "com.ugtours.app-mergeDebugResources-49:/layout/fragment_register.xml",
+        "source": "com.ugtours.app-main-52:/layout/fragment_register.xml"
+    },
+    {
+        "merged": "com.ugtours.app-mergeDebugResources-49:/layout/item_featured_attraction.xml",
+        "source": "com.ugtours.app-main-52:/layout/item_featured_attraction.xml"
+    },
+    {
+        "merged": "com.ugtours.app-mergeDebugResources-49:/layout/fragment_attractions_list.xml",
+        "source": "com.ugtours.app-main-52:/layout/fragment_attractions_list.xml"
+    },
+    {
+        "merged": "com.ugtours.app-mergeDebugResources-49:/layout/item_image_slider.xml",
+        "source": "com.ugtours.app-main-52:/layout/item_image_slider.xml"
+    },
+    {
+        "merged": "com.ugtours.app-mergeDebugResources-49:/layout/fragment_home.xml",
+        "source": "com.ugtours.app-main-52:/layout/fragment_home.xml"
+    }
+]

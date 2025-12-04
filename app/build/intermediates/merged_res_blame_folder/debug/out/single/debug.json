@@ -1,0 +1,182 @@
+[
+    {
+        "merged": "com.ugtours.app-merged_res-50:/drawable_ic_explore.xml.flat",
+        "source": "com.ugtours.app-main-52:/drawable/ic_explore.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/drawable_ic_profile.xml.flat",
+        "source": "com.ugtours.app-main-52:/drawable/ic_profile.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/xml_data_extraction_rules.xml.flat",
+        "source": "com.ugtours.app-main-52:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.ugtours.app-main-52:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/drawable_ic_arrow_back.xml.flat",
+        "source": "com.ugtours.app-main-52:/drawable/ic_arrow_back.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.ugtours.app-main-52:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.ugtours.app-main-52:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/layout_fragment_register.xml.flat",
+        "source": "com.ugtours.app-main-52:/layout/fragment_register.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/drawable_hero_gradient.xml.flat",
+        "source": "com.ugtours.app-main-52:/drawable/hero_gradient.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/layout_fragment_home.xml.flat",
+        "source": "com.ugtours.app-main-52:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.ugtours.app-main-52:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/layout_item_accommodation.xml.flat",
+        "source": "com.ugtours.app-main-52:/layout/item_accommodation.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/drawable_indicator_inactive.xml.flat",
+        "source": "com.ugtours.app-main-52:/drawable/indicator_inactive.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.ugtours.app-main-52:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.ugtours.app-main-52:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/drawable_accommodation_icon_bg.xml.flat",
+        "source": "com.ugtours.app-main-52:/drawable/accommodation_icon_bg.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.ugtours.app-main-52:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/drawable_ic_favorite.xml.flat",
+        "source": "com.ugtours.app-main-52:/drawable/ic_favorite.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.ugtours.app-main-52:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/layout_item_category.xml.flat",
+        "source": "com.ugtours.app-main-52:/layout/item_category.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/drawable_gradient_overlay.xml.flat",
+        "source": "com.ugtours.app-main-52:/drawable/gradient_overlay.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/drawable_ic_favorite_filled.xml.flat",
+        "source": "com.ugtours.app-main-52:/drawable/ic_favorite_filled.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/layout_activity_main.xml.flat",
+        "source": "com.ugtours.app-main-52:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/layout_item_image_slider.xml.flat",
+        "source": "com.ugtours.app-main-52:/layout/item_image_slider.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/layout_fragment_profile.xml.flat",
+        "source": "com.ugtours.app-main-52:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.ugtours.app-main-52:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/layout_item_feature.xml.flat",
+        "source": "com.ugtours.app-main-52:/layout/item_feature.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/drawable_ic_location.xml.flat",
+        "source": "com.ugtours.app-main-52:/drawable/ic_location.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/drawable_indicator_active.xml.flat",
+        "source": "com.ugtours.app-main-52:/drawable/indicator_active.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.ugtours.app-main-52:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/layout_item_featured_attraction.xml.flat",
+        "source": "com.ugtours.app-main-52:/layout/item_featured_attraction.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/layout_item_attraction.xml.flat",
+        "source": "com.ugtours.app-main-52:/layout/item_attraction.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/layout_fragment_favorites.xml.flat",
+        "source": "com.ugtours.app-main-52:/layout/fragment_favorites.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/layout_activity_attraction_detail.xml.flat",
+        "source": "com.ugtours.app-main-52:/layout/activity_attraction_detail.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/drawable_placeholder_attraction.xml.flat",
+        "source": "com.ugtours.app-main-52:/drawable/placeholder_attraction.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.ugtours.app-main-52:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/drawable_ic_home.xml.flat",
+        "source": "com.ugtours.app-main-52:/drawable/ic_home.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.ugtours.app-main-52:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/layout_fragment_attractions_list.xml.flat",
+        "source": "com.ugtours.app-main-52:/layout/fragment_attractions_list.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/drawable_ic_search.xml.flat",
+        "source": "com.ugtours.app-main-52:/drawable/ic_search.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.ugtours.app-main-52:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/drawable_category_card_bg.xml.flat",
+        "source": "com.ugtours.app-main-52:/drawable/category_card_bg.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/xml_backup_rules.xml.flat",
+        "source": "com.ugtours.app-main-52:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/layout_fragment_login.xml.flat",
+        "source": "com.ugtours.app-main-52:/layout/fragment_login.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-50:/navigation_nav_graph.xml.flat",
+        "source": "com.ugtours.app-main-52:/navigation/nav_graph.xml"
+    }
+]

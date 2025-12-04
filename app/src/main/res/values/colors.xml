@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Primary Colors - Uganda inspired (green, yellow, red from flag) -->
+    <color name="md_theme_light_primary">#006D3D</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#8EF8B7</color>
+    <color name="md_theme_light_onPrimaryContainer">#00210F</color>
+    
+    <!-- Secondary Colors - Golden yellow -->
+    <color name="md_theme_light_secondary">#B8A500</color>
+    <color name="md_theme_light_onSecondary">#FFFFFF</color>
+    <color name="md_theme_light_secondaryContainer">#FFEB3B</color>
+    <color name="md_theme_light_onSecondaryContainer">#3A3000</color>
+    
+    <!-- Tertiary Colors - Red accent -->
+    <color name="md_theme_light_tertiary">#C00000</color>
+    <color name="md_theme_light_onTertiary">#FFFFFF</color>
+    <color name="md_theme_light_tertiaryContainer">#FFDAD4</color>
+    <color name="md_theme_light_onTertiaryContainer">#410000</color>
+    
+    <!-- Background -->
+    <color name="md_theme_light_background">#FCFDF7</color>
+    <color name="md_theme_light_onBackground">#1A1C19</color>
+    
+    <!-- Surface -->
+    <color name="md_theme_light_surface">#FCFDF7</color>
+    <color name="md_theme_light_onSurface">#1A1C19</color>
+    <color name="md_theme_light_surfaceVariant">#DDE5DA</color>
+    <color name="md_theme_light_onSurfaceVariant">#414941</color>
+    
+    <!-- Outline -->
+    <color name="md_theme_light_outline">#717970</color>
+    
+    <!-- Error -->
+    <color name="md_theme_light_error">#BA1A1A</color>
+    <color name="md_theme_light_onError">#FFFFFF</color>
+    <color name="md_theme_light_errorContainer">#FFDAD6</color>
+    <color name="md_theme_light_onErrorContainer">#410002</color>
+</resources>
