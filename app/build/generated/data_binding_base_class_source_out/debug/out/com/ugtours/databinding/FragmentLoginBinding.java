@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -31,15 +32,20 @@ public final class FragmentLoginBinding implements ViewBinding {
   public final TextInputEditText passwordEditText;
 
   @NonNull
+  public final ProgressBar progressBar;
+
+  @NonNull
   public final TextView registerTextView;
 
   private FragmentLoginBinding(@NonNull LinearLayout rootView,
       @NonNull TextInputEditText emailEditText, @NonNull Button loginButton,
-      @NonNull TextInputEditText passwordEditText, @NonNull TextView registerTextView) {
+      @NonNull TextInputEditText passwordEditText, @NonNull ProgressBar progressBar,
+      @NonNull TextView registerTextView) {
     this.rootView = rootView;
     this.emailEditText = emailEditText;
     this.loginButton = loginButton;
     this.passwordEditText = passwordEditText;
+    this.progressBar = progressBar;
     this.registerTextView = registerTextView;
   }
 
@@ -88,6 +94,12 @@ public final class FragmentLoginBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.progress_bar;
+      ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
+      if (progressBar == null) {
+        break missingId;
+      }
+
       id = R.id.register_text_view;
       TextView registerTextView = ViewBindings.findChildViewById(rootView, id);
       if (registerTextView == null) {
@@ -95,7 +107,7 @@ public final class FragmentLoginBinding implements ViewBinding {
       }
 
       return new FragmentLoginBinding((LinearLayout) rootView, emailEditText, loginButton,
-          passwordEditText, registerTextView);
+          passwordEditText, progressBar, registerTextView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

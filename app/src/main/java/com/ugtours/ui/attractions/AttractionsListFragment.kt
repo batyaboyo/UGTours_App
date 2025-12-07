@@ -2,27 +2,29 @@ package com.ugtours.ui.attractions
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
-import com.google.android.material.chip.Chip
-import com.ugtours.R
-import com.ugtours.data.AttractionsData
+import androidx.fragment.app.viewModels
 import com.ugtours.databinding.FragmentAttractionsListBinding
-import com.ugtours.models.Attraction
+import com.ugtours.ui.ViewModelFactory
+import com.ugtours.ui.common.UiState
 
+/**
+ * Attractions List Fragment with MVVM architecture.
+ * Uses AttractionsViewModel for search and filtering.
+ */
 class AttractionsListFragment : Fragment() {
     
     private var _binding: FragmentAttractionsListBinding? = null
     private val binding get() = _binding!!
     
+    private val viewModel: AttractionsViewModel by viewModels {
+        ViewModelFactory(requireContext())
+    }
+    
     private lateinit var adapter: AttractionAdapter
-    private var allAttractions = listOf<Attraction>()
-    private var filteredAttractions = listOf<Attraction>()
     
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,14 +38,9 @@ class AttractionsListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
-        allAttractions = AttractionsData.getAllAttractions()
-        filteredAttractions = allAttractions
-        
         setupRecyclerView()
         setupSearch()
-        setupCategoryFilters()
-        
-        updateAttractionsList()
+        setupObservers()
     }
     
     private fun setupRecyclerView() {
@@ -56,50 +53,40 @@ class AttractionsListFragment : Fragment() {
     }
     
     private fun setupSearch() {
-        binding.searchBar.addTextChangedListener { text ->
-            filterAttractions()
-        }
-    }
-    
-    private fun setupCategoryFilters() {
-        binding.categoryChips.setOnCheckedStateChangeListener { group, checkedIds ->
-            filterAttractions()
-        }
-    }
-    
-    private fun filterAttractions() {
-        val searchQuery = binding.searchBar.text.toString()
-        val selectedChipId = binding.categoryChips.checkedChipId
-        
-        filteredAttractions = allAttractions.filter { attraction ->
-            val matchesSearch = searchQuery.isEmpty() || 
-                attraction.name.contains(searchQuery, ignoreCase = true) ||
-                attraction.description.contains(searchQuery, ignoreCase = true) ||
-                attraction.location.contains(searchQuery, ignoreCase = true)
-            
-            val matchesCategory = when (selectedChipId) {
-                R.id.chip_all -> true
-                R.id.chip_national_park -> attraction.category.contains("National Park", ignoreCase = true)
-                R.id.chip_waterfall -> attraction.category.contains("Waterfall", ignoreCase = true)
-                R.id.chip_cultural -> attraction.category.contains("Cultural", ignoreCase = true)
-                else -> true
+        binding.searchBar.addTextChangedListener(object : android.text.TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+            override fun afterTextChanged(s: android.text.Editable?) {
+                val query = s?.toString() ?: ""
+                viewModel.searchAttractions(query)
             }
-            
-            matchesSearch && matchesCategory
-        }
-        
-        updateAttractionsList()
+        })
     }
     
-    private fun updateAttractionsList() {
-        adapter.submitList(filteredAttractions)
-        
-        if (filteredAttractions.isEmpty()) {
-            binding.emptyView.visibility = View.VISIBLE
-            binding.attractionsRecyclerView.visibility = View.GONE
-        } else {
-            binding.emptyView.visibility = View.GONE
-            binding.attractionsRecyclerView.visibility = View.VISIBLE
+    private fun setupObservers() {
+        // Observe attractions list with search/filter results
+        viewModel.attractions.observe(viewLifecycleOwner) { state ->
+            when (state) {
+                is UiState.Loading -> {
+                    // Could show loading indicator
+                    binding.emptyView.visibility = View.GONE
+                }
+                is UiState.Success -> {
+                    adapter.submitList(state.data)
+                    binding.emptyView.visibility = View.GONE
+                    binding.attractionsRecyclerView.visibility = View.VISIBLE
+                }
+                is UiState.Empty -> {
+                    adapter.submitList(emptyList())
+                    binding.emptyView.visibility = View.VISIBLE
+                    binding.attractionsRecyclerView.visibility = View.GONE
+                }
+                is UiState.Error -> {
+                    // Handle error
+                    binding.emptyView.visibility = View.VISIBLE
+                    binding.attractionsRecyclerView.visibility = View.GONE
+                }
+            }
         }
     }
     

@@ -57,7 +57,7 @@
     <string name="feature_favorites_desc">Bookmark your favorite destinations</string>
     <string name="feature_planner">Trip Planner</string>
     <string name="feature_planner_desc">Create personalized itineraries</string>
-    <string name="developer_info_title">Developer Information</string>
+    <string name="developer_info_title">Developer Batya Tonny Boyo</string>
     <string name="developer_name">Developed with ❤️ for Uganda travelers</string>
     <string name="contact_email">Contact: support@ugtours.com</string>
 
@@ -71,5 +71,5 @@
     
     <!-- About Uganda -->
     <string name="about_uganda">About UG Tours</string>
-    <string name="about_uganda_description">UG Tours is your ultimate offline guide to exploring the Pearl of Africa. Designed for travelers who want to disconnect while discovering Uganda\'s wonders, this app works completely without an internet connection. Plan your trips, find detailed information on national parks, waterfalls, and cultural sites, and discover the best accommodations nearby. Save your favorite spots and create your own personalized itinerary. Whether you\'re tracking gorillas in Bwindi or rafting the Nile in Jinja, UG Tours is your reliable companion.</string>
+    <string name="about_uganda_description">UG Tours is your ultimate offline companion for exploring Uganda, the Pearl of Africa. Designed for adventurers, nature lovers, and cultural enthusiasts, this app works completely without internet connection.\n\n🌍 Discover Uganda\'s Treasures:\nFrom the mist-covered mountains of Bwindi Impenetrable Forest, home to endangered mountain gorillas, to the thundering Murchison Falls and the serene waters of Lake Victoria - Uganda offers unparalleled natural beauty and wildlife experiences.\n\n✨ Key Features:\n• 100% Offline Access - Explore without data or WiFi\n• Comprehensive Attraction Database - National parks, waterfalls, cultural sites, and adventure spots\n• Smart Trip Planning - Save favorites and create personalized itineraries\n• Accommodation Finder - Discover nearby hotels, lodges, and campsites\n• Recently Viewed History - Never lose track of places you\'ve explored\n\n🦍 Whether you\'re tracking mountain gorillas in Bwindi, white-water rafting on the Nile in Jinja, spotting tree-climbing lions in Queen Elizabeth National Park, or immersing yourself in the rich Buganda Kingdom heritage, UG Tours is your trusted travel companion.\n\nDeveloped with ❤️ for Uganda travelers by passionate explorers who believe everyone should experience the magic of the Pearl of Africa.</string>
 </resources>

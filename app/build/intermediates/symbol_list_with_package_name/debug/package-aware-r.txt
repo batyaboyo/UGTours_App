@@ -1149,6 +1149,7 @@ attr suffixText
 attr suffixTextAppearance
 attr suffixTextColor
 attr suggestionRowLayout
+attr swipeRefreshLayoutProgressSpinnerBackgroundColor
 attr switchMinWidth
 attr switchPadding
 attr switchStyle
@@ -1410,6 +1411,8 @@ color button_material_dark
 color button_material_light
 color call_notification_answer_color
 color call_notification_decline_color
+color card_background
+color card_background_dark
 color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
@@ -1456,6 +1459,8 @@ color dim_foreground_disabled_material_dark
 color dim_foreground_disabled_material_light
 color dim_foreground_material_dark
 color dim_foreground_material_light
+color divider
+color divider_dark
 color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
@@ -2058,6 +2063,29 @@ color material_timepicker_button_stroke
 color material_timepicker_clock_text_color
 color material_timepicker_clockface
 color material_timepicker_modebutton_tint
+color md_theme_dark_background
+color md_theme_dark_error
+color md_theme_dark_errorContainer
+color md_theme_dark_onBackground
+color md_theme_dark_onError
+color md_theme_dark_onErrorContainer
+color md_theme_dark_onPrimary
+color md_theme_dark_onPrimaryContainer
+color md_theme_dark_onSecondary
+color md_theme_dark_onSecondaryContainer
+color md_theme_dark_onSurface
+color md_theme_dark_onSurfaceVariant
+color md_theme_dark_onTertiary
+color md_theme_dark_onTertiaryContainer
+color md_theme_dark_outline
+color md_theme_dark_primary
+color md_theme_dark_primaryContainer
+color md_theme_dark_secondary
+color md_theme_dark_secondaryContainer
+color md_theme_dark_surface
+color md_theme_dark_surfaceVariant
+color md_theme_dark_tertiary
+color md_theme_dark_tertiaryContainer
 color md_theme_light_background
 color md_theme_light_error
 color md_theme_light_errorContainer
@@ -2138,6 +2166,7 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color overlay_dark
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -2158,6 +2187,12 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color text_hint
+color text_hint_dark
+color text_primary
+color text_primary_dark
+color text_secondary
+color text_secondary_dark
 color tooltip_background_dark
 color tooltip_background_light
 color white
@@ -3238,6 +3273,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_share
 id action_text
 id actions
 id activity_chooser_view_content
@@ -3253,6 +3289,7 @@ id animateToStart
 id antiClockwise
 id anticipate
 id app_bar
+id app_version_text
 id arc
 id asConfigured
 id async
@@ -3283,7 +3320,6 @@ id cache_measures
 id callMeasure
 id cancel_button
 id carryVelocity
-id categories_recycler_view
 id category_chip
 id category_chips
 id category_icon
@@ -3304,6 +3340,9 @@ id chip_national_park
 id chip_waterfall
 id chronometer
 id circle_center
+id clear_cache_option
+id clear_favorites_option
+id clear_recent_option
 id clear_text
 id clip_horizontal
 id clip_vertical
@@ -3313,6 +3352,7 @@ id collapseActionView
 id collapsing_toolbar
 id compress
 id confirm_button
+id confirm_password_edit_text
 id constraint
 id contact_email
 id container
@@ -3377,8 +3417,10 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id explore_all_button
+id explore_button
 id fab_favorite
 id fade
+id favorites_count_text
 id favorites_recycler_view
 id feature_text
 id featured_recycler_view
@@ -3449,6 +3491,7 @@ id locale
 id location_text
 id login_button
 id login_text_view
+id logout_button
 id ltr
 id m3_side_sheet
 id marquee
@@ -3576,10 +3619,14 @@ id pooling_container_listener_holder_tag
 id position
 id postLayout
 id pressed
+id progress_bar
 id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id recent_count_text
+id recently_viewed_recycler_view
+id recently_viewed_section
 id rectangles
 id register_button
 id register_text_view
@@ -3709,6 +3756,9 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id user_email_text
+id user_name_text
+id user_profile_card
 id vertical_only
 id view_all_text
 id view_offset_helper
@@ -3867,6 +3917,7 @@ layout fragment_home
 layout fragment_login
 layout fragment_profile
 layout fragment_register
+layout fragment_settings
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_accommodation
@@ -3936,6 +3987,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu attraction_detail_menu
 menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -5430,6 +5482,7 @@ styleable State android_id constraints
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable StateListDrawableItem android_drawable
 styleable StateSet defaultState
+styleable SwipeRefreshLayout swipeRefreshLayoutProgressSpinnerBackgroundColor
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode
 styleable SwitchMaterial useMaterialThemeColors
 styleable TabItem android_icon android_layout android_text

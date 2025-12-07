@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,6 +23,9 @@ public final class FragmentRegisterBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final TextInputEditText confirmPasswordEditText;
+
+  @NonNull
   public final TextInputEditText emailEditText;
 
   @NonNull
@@ -34,17 +38,23 @@ public final class FragmentRegisterBinding implements ViewBinding {
   public final TextInputEditText passwordEditText;
 
   @NonNull
+  public final ProgressBar progressBar;
+
+  @NonNull
   public final Button registerButton;
 
   private FragmentRegisterBinding(@NonNull LinearLayout rootView,
-      @NonNull TextInputEditText emailEditText, @NonNull TextView loginTextView,
-      @NonNull TextInputEditText nameEditText, @NonNull TextInputEditText passwordEditText,
+      @NonNull TextInputEditText confirmPasswordEditText, @NonNull TextInputEditText emailEditText,
+      @NonNull TextView loginTextView, @NonNull TextInputEditText nameEditText,
+      @NonNull TextInputEditText passwordEditText, @NonNull ProgressBar progressBar,
       @NonNull Button registerButton) {
     this.rootView = rootView;
+    this.confirmPasswordEditText = confirmPasswordEditText;
     this.emailEditText = emailEditText;
     this.loginTextView = loginTextView;
     this.nameEditText = nameEditText;
     this.passwordEditText = passwordEditText;
+    this.progressBar = progressBar;
     this.registerButton = registerButton;
   }
 
@@ -75,6 +85,12 @@ public final class FragmentRegisterBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.confirm_password_edit_text;
+      TextInputEditText confirmPasswordEditText = ViewBindings.findChildViewById(rootView, id);
+      if (confirmPasswordEditText == null) {
+        break missingId;
+      }
+
       id = R.id.email_edit_text;
       TextInputEditText emailEditText = ViewBindings.findChildViewById(rootView, id);
       if (emailEditText == null) {
@@ -99,14 +115,21 @@ public final class FragmentRegisterBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.progress_bar;
+      ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
+      if (progressBar == null) {
+        break missingId;
+      }
+
       id = R.id.register_button;
       Button registerButton = ViewBindings.findChildViewById(rootView, id);
       if (registerButton == null) {
         break missingId;
       }
 
-      return new FragmentRegisterBinding((LinearLayout) rootView, emailEditText, loginTextView,
-          nameEditText, passwordEditText, registerButton);
+      return new FragmentRegisterBinding((LinearLayout) rootView, confirmPasswordEditText,
+          emailEditText, loginTextView, nameEditText, passwordEditText, progressBar,
+          registerButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

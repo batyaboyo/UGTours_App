@@ -4,7 +4,7 @@ package com.ugtours.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -43,7 +43,7 @@ public final class FragmentAttractionsListBinding implements ViewBinding {
   public final Chip chipWaterfall;
 
   @NonNull
-  public final TextView emptyView;
+  public final LinearLayout emptyView;
 
   @NonNull
   public final TextInputEditText searchBar;
@@ -54,7 +54,7 @@ public final class FragmentAttractionsListBinding implements ViewBinding {
   private FragmentAttractionsListBinding(@NonNull ConstraintLayout rootView,
       @NonNull RecyclerView attractionsRecyclerView, @NonNull ChipGroup categoryChips,
       @NonNull Chip chipAll, @NonNull Chip chipCultural, @NonNull Chip chipNationalPark,
-      @NonNull Chip chipWaterfall, @NonNull TextView emptyView,
+      @NonNull Chip chipWaterfall, @NonNull LinearLayout emptyView,
       @NonNull TextInputEditText searchBar, @NonNull TextInputLayout searchBarLayout) {
     this.rootView = rootView;
     this.attractionsRecyclerView = attractionsRecyclerView;
@@ -132,7 +132,7 @@ public final class FragmentAttractionsListBinding implements ViewBinding {
       }
 
       id = R.id.empty_view;
-      TextView emptyView = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout emptyView = ViewBindings.findChildViewById(rootView, id);
       if (emptyView == null) {
         break missingId;
       }

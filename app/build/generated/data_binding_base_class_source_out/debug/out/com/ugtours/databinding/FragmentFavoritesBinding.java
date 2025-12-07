@@ -11,6 +11,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.button.MaterialButton;
 import com.ugtours.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -24,12 +25,17 @@ public final class FragmentFavoritesBinding implements ViewBinding {
   public final LinearLayout emptyView;
 
   @NonNull
+  public final MaterialButton exploreButton;
+
+  @NonNull
   public final RecyclerView favoritesRecyclerView;
 
   private FragmentFavoritesBinding(@NonNull ConstraintLayout rootView,
-      @NonNull LinearLayout emptyView, @NonNull RecyclerView favoritesRecyclerView) {
+      @NonNull LinearLayout emptyView, @NonNull MaterialButton exploreButton,
+      @NonNull RecyclerView favoritesRecyclerView) {
     this.rootView = rootView;
     this.emptyView = emptyView;
+    this.exploreButton = exploreButton;
     this.favoritesRecyclerView = favoritesRecyclerView;
   }
 
@@ -66,13 +72,19 @@ public final class FragmentFavoritesBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.explore_button;
+      MaterialButton exploreButton = ViewBindings.findChildViewById(rootView, id);
+      if (exploreButton == null) {
+        break missingId;
+      }
+
       id = R.id.favorites_recycler_view;
       RecyclerView favoritesRecyclerView = ViewBindings.findChildViewById(rootView, id);
       if (favoritesRecyclerView == null) {
         break missingId;
       }
 
-      return new FragmentFavoritesBinding((ConstraintLayout) rootView, emptyView,
+      return new FragmentFavoritesBinding((ConstraintLayout) rootView, emptyView, exploreButton,
           favoritesRecyclerView);
     }
     String missingId = rootView.getResources().getResourceName(id);

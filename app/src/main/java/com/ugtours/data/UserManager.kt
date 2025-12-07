@@ -3,6 +3,7 @@ package com.ugtours.data
 import android.content.Context
 import android.content.SharedPreferences
 import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.ugtours.models.User
 
 object UserManager {
@@ -18,7 +19,14 @@ object UserManager {
         val prefs = getPrefs(context)
         val usersJson = prefs.getString(KEY_USERS_DB, "{}")
         val gson = Gson()
-        val usersMap = gson.fromJson(usersJson, Map::class.java).toMutableMap()
+        
+        // Use TypeToken for type-safe deserialization
+        val type = object : TypeToken<MutableMap<String, Map<String, String>>>() {}.type
+        val usersMap: MutableMap<String, Map<String, String>> = try {
+            gson.fromJson(usersJson, type) ?: mutableMapOf()
+        } catch (e: Exception) {
+            mutableMapOf()
+        }
 
         if (usersMap.containsKey(user.email)) {
             return false // User already exists
@@ -41,16 +49,21 @@ object UserManager {
         val prefs = getPrefs(context)
         val usersJson = prefs.getString(KEY_USERS_DB, "{}")
         val gson = Gson()
-        val usersMap = gson.fromJson(usersJson, Map::class.java) as Map<String, Any>
+        
+        // Use TypeToken for type-safe deserialization
+        val type = object : TypeToken<Map<String, Map<String, String>>>() {}.type
+        val usersMap: Map<String, Map<String, String>> = try {
+            gson.fromJson(usersJson, type) ?: emptyMap()
+        } catch (e: Exception) {
+            emptyMap()
+        }
 
-        if (usersMap.containsKey(email)) {
-            val userMap = usersMap[email] as Map<String, String>
-            if (userMap["password"] == password) {
-                // Login successful, save session
-                val user = User(userMap["name"] ?: "", email, password)
-                saveUserSession(context, user)
-                return true
-            }
+        val userMap = usersMap[email]
+        if (userMap != null && userMap["password"] == password) {
+            // Login successful, save session
+            val user = User(userMap["name"] ?: "", email, password)
+            saveUserSession(context, user)
+            return true
         }
         return false
     }

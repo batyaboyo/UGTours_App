@@ -6,16 +6,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.ugtours.data.AttractionsData
+import com.bumptech.glide.Glide
+import com.ugtours.R
 import com.ugtours.databinding.FragmentHomeBinding
-import com.ugtours.ui.attractions.AttractionAdapter
+import com.ugtours.ui.ViewModelFactory
 import com.ugtours.ui.attractions.AttractionDetailActivity
+import com.ugtours.ui.common.UiState
 
+/**
+ * Home Fragment with MVVM architecture.
+ * Uses HomeViewModel for data management.
+ */
 class HomeFragment : Fragment() {
     
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    
+    private val viewModel: HomeViewModel by viewModels {
+        ViewModelFactory(requireContext())
+    }
     
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,9 +41,50 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         
         setupHeroSection()
-        setupCategories()
-        setupFeaturedAttractions()
+        setupObservers()
+        setupClickListeners()
+    }
+    
+    private fun setupObservers() {
+        // Observe featured attractions
+        viewModel.featuredAttractions.observe(viewLifecycleOwner) { state ->
+            when (state) {
+                is UiState.Success -> {
+                    setupFeaturedAttractions(state.data)
+                }
+                is UiState.Error -> {
+                    // Handle error - could show error message
+                }
+                is UiState.Loading -> {
+                    // Could show loading indicator
+                }
+                is UiState.Empty -> {
+                    // Hide featured section
+                }
+            }
+        }
         
+        // Observe recently viewed
+        viewModel.recentlyViewed.observe(viewLifecycleOwner) { state ->
+            when (state) {
+                is UiState.Success -> {
+                    setupRecentlyViewed(state.data)
+                }
+                is UiState.Empty -> {
+                    // Hide recently viewed section
+                    binding.recentlyViewedSection.visibility = View.GONE
+                    binding.recentlyViewedRecyclerView.visibility = View.GONE
+                }
+                else -> {
+                    // Hide section for loading or error
+                    binding.recentlyViewedSection.visibility = View.GONE
+                    binding.recentlyViewedRecyclerView.visibility = View.GONE
+                }
+            }
+        }
+    }
+    
+    private fun setupClickListeners() {
         binding.exploreAllButton.setOnClickListener {
             navigateToAttractions()
         }
@@ -44,52 +96,38 @@ class HomeFragment : Fragment() {
     
     private fun setupHeroSection() {
         // Load a random attraction image for the hero section
-        val randomAttraction = AttractionsData.getAllAttractions().random()
+        val randomAttraction = viewModel.getRandomAttraction()
         
-        com.bumptech.glide.Glide.with(this)
-            .load(randomAttraction.imageUrls.first())
-            .placeholder(com.ugtours.R.drawable.placeholder_attraction)
-            .error(com.ugtours.R.drawable.placeholder_attraction)
-            .centerCrop()
-            .into(binding.heroImage)
+        randomAttraction?.let { attraction ->
+            Glide.with(this)
+                .load(attraction.imageUrls.first())
+                .placeholder(R.drawable.placeholder_attraction)
+                .error(R.drawable.placeholder_attraction)
+                .centerCrop()
+                .into(binding.heroImage)
+        }
     }
     
-    private fun setupCategories() {
-        // Show only main category types based on the 16 attractions
-        val mainCategories = listOf(
-            Category("National Parks", com.ugtours.R.drawable.ic_explore),
-            Category("Waterfalls", com.ugtours.R.drawable.ic_location),
-            Category("Mountains", com.ugtours.R.drawable.ic_explore),
-            Category("Cultural Sites", com.ugtours.R.drawable.ic_profile),
-            Category("Wildlife", com.ugtours.R.drawable.ic_favorite)
-        )
+    private fun setupRecentlyViewed(attractions: List<com.ugtours.models.Attraction>) {
+        // Show section
+        binding.recentlyViewedSection.visibility = View.VISIBLE
+        binding.recentlyViewedRecyclerView.visibility = View.VISIBLE
         
-        val adapter = CategoryAdapter(mainCategories) { category ->
-            // Navigate to attractions list
-            navigateToAttractions()
+        val adapter = FeaturedAttractionAdapter { attraction ->
+            val intent = Intent(requireContext(), AttractionDetailActivity::class.java)
+            intent.putExtra("ATTRACTION_ID", attraction.id)
+            startActivity(intent)
         }
         
-        binding.categoriesRecyclerView.apply {
+        binding.recentlyViewedRecyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             this.adapter = adapter
         }
-    }
-    
-    private fun getIconForCategory(category: String): Int {
-        return when {
-            category.contains("Park", true) -> com.ugtours.R.drawable.ic_explore
-            category.contains("Waterfall", true) -> com.ugtours.R.drawable.ic_location
-            category.contains("Mountain", true) -> com.ugtours.R.drawable.ic_explore
-            category.contains("Cultural", true) -> com.ugtours.R.drawable.ic_profile
-            category.contains("Wildlife", true) -> com.ugtours.R.drawable.ic_favorite
-            else -> com.ugtours.R.drawable.ic_explore
-        }
-    }
-    
-    private fun setupFeaturedAttractions() {
-        // Get featured attractions - ensure at least 3 are shown
-        val featuredAttractions = AttractionsData.getAllAttractions().take(3)
         
+        adapter.submitList(attractions)
+    }
+    
+    private fun setupFeaturedAttractions(attractions: List<com.ugtours.models.Attraction>) {
         val adapter = FeaturedAttractionAdapter { attraction ->
             val intent = Intent(requireContext(), AttractionDetailActivity::class.java)
             intent.putExtra("ATTRACTION_ID", attraction.id)
@@ -101,13 +139,13 @@ class HomeFragment : Fragment() {
             this.adapter = adapter
         }
         
-        adapter.submitList(featuredAttractions)
+        adapter.submitList(attractions)
     }
     
     private fun navigateToAttractions() {
         requireActivity().findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(
-            com.ugtours.R.id.bottom_navigation
-        )?.selectedItemId = com.ugtours.R.id.navigation_attractions
+            R.id.bottom_navigation
+        )?.selectedItemId = R.id.navigation_attractions
     }
     
     override fun onDestroyView() {

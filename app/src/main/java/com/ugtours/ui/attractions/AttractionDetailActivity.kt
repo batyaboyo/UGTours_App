@@ -1,25 +1,26 @@
 package com.ugtours.ui.attractions
 
-import android.graphics.Color
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.ImageView
-import android.widget.LinearLayout
+import android.view.Menu
+import android.view.MenuItem
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
-import com.bumptech.glide.Glide
 import com.ugtours.R
-import com.ugtours.data.AttractionsData
 import com.ugtours.databinding.ActivityAttractionDetailBinding
-import com.ugtours.models.Attraction
+import com.ugtours.ui.ViewModelFactory
 
+/**
+ * Attraction Detail Activity with MVVM architecture.
+ * Uses AttractionDetailViewModel for data and state management.
+ */
 class AttractionDetailActivity : AppCompatActivity() {
     
     private lateinit var binding: ActivityAttractionDetailBinding
-    private var attraction: Attraction? = null
-    private val indicators = mutableListOf<ImageView>()
+    private lateinit var viewModel: AttractionDetailViewModel
+    private val indicators = mutableListOf<android.widget.ImageView>()
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,8 +28,16 @@ class AttractionDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
         
         val attractionId = intent.getIntExtra("ATTRACTION_ID", -1)
-        attraction = AttractionsData.getAttractionById(attractionId)
+        if (attractionId == -1) {
+            finish()
+            return
+        }
         
+        // Create ViewModel with attraction ID
+        val factory = ViewModelFactory(this)
+        viewModel = factory.createAttractionDetailViewModel(attractionId)
+        
+        val attraction = viewModel.attraction
         if (attraction == null) {
             finish()
             return
@@ -36,17 +45,67 @@ class AttractionDetailActivity : AppCompatActivity() {
         
         setupToolbar()
         displayAttractionDetails()
+        setupObservers()
     }
     
     private fun setupToolbar() {
+        setSupportActionBar(binding.toolbar)
         binding.toolbar.setNavigationOnClickListener {
             finish()
         }
-        binding.collapsingToolbar.title = attraction?.name
+        binding.collapsingToolbar.title = viewModel.attraction?.name
+    }
+    
+    private fun setupObservers() {
+        // Observe favorite status - automatically updates button
+        viewModel.isFavorite.observe(this) { isFavorite ->
+            updateFavoriteButton(isFavorite)
+        }
+    }
+    
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.attraction_detail_menu, menu)
+        return true
+    }
+    
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_share -> {
+                shareAttraction()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+    
+    private fun shareAttraction() {
+        viewModel.attraction?.let { attr ->
+            val shareText = buildString {
+                append("🌍 Check out this amazing place in Uganda!\n\n")
+                append("📍 ${attr.name}\n")
+                append("🏷️ ${attr.category}\n")
+                append("📌 ${attr.location}\n\n")
+                append("${attr.description.take(200)}...\n\n")
+                append("✨ Unique Features:\n")
+                attr.uniqueFeatures.take(3).forEach { feature ->
+                    append("• $feature\n")
+                }
+                append("\nDiscover more with UG Tours app!")
+            }
+            
+            val shareIntent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, shareText)
+                putExtra(Intent.EXTRA_SUBJECT, "${attr.name} - UG Tours")
+                type = "text/plain"
+            }
+            
+            startActivity(Intent.createChooser(shareIntent, "Share ${attr.name} via"))
+        }
     }
     
     private fun displayAttractionDetails() {
-        attraction?.let { attr ->
+        viewModel.attraction?.let { attr ->
             // Set basic info
             binding.attractionName.text = attr.name
             binding.categoryChip.text = attr.category
@@ -80,11 +139,9 @@ class AttractionDetailActivity : AppCompatActivity() {
                 adapter = accommodationsAdapter
             }
             
-            // Setup favorite button
-            updateFavoriteButton(attr.isFavorite)
+            // Setup favorite button click
             binding.fabFavorite.setOnClickListener {
-                attr.isFavorite = !attr.isFavorite
-                updateFavoriteButton(attr.isFavorite)
+                viewModel.toggleFavorite()
             }
         }
     }
@@ -97,9 +154,9 @@ class AttractionDetailActivity : AppCompatActivity() {
         val indicatorMargin = resources.getDimensionPixelSize(R.dimen.indicator_margin)
         
         for (i in 0 until count) {
-            val indicator = ImageView(this).apply {
+            val indicator = android.widget.ImageView(this).apply {
                 setImageResource(R.drawable.indicator_inactive)
-                layoutParams = LinearLayout.LayoutParams(indicatorSize, indicatorSize).apply {
+                layoutParams = android.widget.LinearLayout.LayoutParams(indicatorSize, indicatorSize).apply {
                     setMargins(indicatorMargin, 0, indicatorMargin, 0)
                 }
             }

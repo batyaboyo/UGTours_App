@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,9 +24,6 @@ public final class FragmentHomeBinding implements ViewBinding {
   private final NestedScrollView rootView;
 
   @NonNull
-  public final RecyclerView categoriesRecyclerView;
-
-  @NonNull
   public final MaterialButton exploreAllButton;
 
   @NonNull
@@ -35,17 +33,24 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final ImageView heroImage;
 
   @NonNull
+  public final RecyclerView recentlyViewedRecyclerView;
+
+  @NonNull
+  public final LinearLayout recentlyViewedSection;
+
+  @NonNull
   public final TextView viewAllText;
 
   private FragmentHomeBinding(@NonNull NestedScrollView rootView,
-      @NonNull RecyclerView categoriesRecyclerView, @NonNull MaterialButton exploreAllButton,
-      @NonNull RecyclerView featuredRecyclerView, @NonNull ImageView heroImage,
-      @NonNull TextView viewAllText) {
+      @NonNull MaterialButton exploreAllButton, @NonNull RecyclerView featuredRecyclerView,
+      @NonNull ImageView heroImage, @NonNull RecyclerView recentlyViewedRecyclerView,
+      @NonNull LinearLayout recentlyViewedSection, @NonNull TextView viewAllText) {
     this.rootView = rootView;
-    this.categoriesRecyclerView = categoriesRecyclerView;
     this.exploreAllButton = exploreAllButton;
     this.featuredRecyclerView = featuredRecyclerView;
     this.heroImage = heroImage;
+    this.recentlyViewedRecyclerView = recentlyViewedRecyclerView;
+    this.recentlyViewedSection = recentlyViewedSection;
     this.viewAllText = viewAllText;
   }
 
@@ -76,12 +81,6 @@ public final class FragmentHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.categories_recycler_view;
-      RecyclerView categoriesRecyclerView = ViewBindings.findChildViewById(rootView, id);
-      if (categoriesRecyclerView == null) {
-        break missingId;
-      }
-
       id = R.id.explore_all_button;
       MaterialButton exploreAllButton = ViewBindings.findChildViewById(rootView, id);
       if (exploreAllButton == null) {
@@ -100,14 +99,27 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.recently_viewed_recycler_view;
+      RecyclerView recentlyViewedRecyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (recentlyViewedRecyclerView == null) {
+        break missingId;
+      }
+
+      id = R.id.recently_viewed_section;
+      LinearLayout recentlyViewedSection = ViewBindings.findChildViewById(rootView, id);
+      if (recentlyViewedSection == null) {
+        break missingId;
+      }
+
       id = R.id.view_all_text;
       TextView viewAllText = ViewBindings.findChildViewById(rootView, id);
       if (viewAllText == null) {
         break missingId;
       }
 
-      return new FragmentHomeBinding((NestedScrollView) rootView, categoriesRecyclerView,
-          exploreAllButton, featuredRecyclerView, heroImage, viewAllText);
+      return new FragmentHomeBinding((NestedScrollView) rootView, exploreAllButton,
+          featuredRecyclerView, heroImage, recentlyViewedRecyclerView, recentlyViewedSection,
+          viewAllText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

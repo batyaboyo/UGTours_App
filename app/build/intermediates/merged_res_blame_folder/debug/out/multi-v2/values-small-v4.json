@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.ugtours.app-mergeDebugResources-48:/values-small-v4/values-small-v4.xml",
+            "outputFile": "com.ugtours.app-mergeDebugResources-55:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\batzt\\.gradle\\caches\\9.0-milestone-1\\transforms\\5e00f626b2b950af2f602e73584cc21f\\transformed\\material-1.11.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\batzt\\.gradle\\caches\\9.0-milestone-1\\transforms\\d34cc4b61014220ac373d763554c52c7\\transformed\\material-1.11.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
