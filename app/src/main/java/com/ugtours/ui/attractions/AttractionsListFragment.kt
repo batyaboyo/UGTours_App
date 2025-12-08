@@ -40,6 +40,7 @@ class AttractionsListFragment : Fragment() {
         
         setupRecyclerView()
         setupSearch()
+        setupCategoryFilters()
         setupObservers()
     }
     
@@ -61,6 +62,33 @@ class AttractionsListFragment : Fragment() {
                 viewModel.searchAttractions(query)
             }
         })
+    }
+    
+    private fun setupCategoryFilters() {
+        binding.categoryChips.setOnCheckedStateChangeListener { _, checkedIds ->
+            if (checkedIds.isEmpty()) return@setOnCheckedStateChangeListener
+            
+            // Clear search bar when filtering by category
+            binding.searchBar.text?.clear()
+            
+            when (checkedIds[0]) {
+                binding.chipAll.id -> {
+                    viewModel.clearSearch()
+                }
+                binding.chipNationalPark.id -> {
+                    // Filter attractions that contain "National Park" in category
+                    viewModel.filterByCategory("National Park")
+                }
+                binding.chipWaterfall.id -> {
+                    // Filter attractions that contain "Waterfall" in category
+                    viewModel.filterByCategory("Waterfall")
+                }
+                binding.chipCultural.id -> {
+                    // Filter attractions that contain "Cultural" in category
+                    viewModel.filterByCategory("Cultural")
+                }
+            }
+        }
     }
     
     private fun setupObservers() {

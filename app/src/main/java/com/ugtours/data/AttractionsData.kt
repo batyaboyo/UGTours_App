@@ -22,11 +22,11 @@ object AttractionsData {
                     "Gorilla trekking permits available year-round"
                 ),
                 imageUrls = listOf(
-                    "https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?w=800&q=80",
-                    "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?w=800&q=80",
-                    "https://images.unsplash.com/photo-1598524722512-0c0ccb5a533f?w=800&q=80"
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Bwindi_Impenetrable_National_Park-112416.jpg/500px-Bwindi_Impenetrable_National_Park-112416.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Bwindi_mountains.jpg/500px-Bwindi_mountains.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Mountain_gorilla_%28Gorilla_beringei_beringei%29_female_eating_root.jpg/500px-Mountain_gorilla_%28Gorilla_beringei_beringei%29_female_eating_root.jpg"
                 ),
-                thumbnailUrl = "https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?w=800&q=80",
+                thumbnailUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Bwindi_Impenetrable_National_Park-112416.jpg/500px-Bwindi_Impenetrable_National_Park-112416.jpg",
                 nearbyAccommodations = listOf(
                     Accommodation(
                         name = "Buhoma Lodge",
@@ -62,11 +62,11 @@ object AttractionsData {
                     "Boat safaris to the falls base"
                 ),
                 imageUrls = listOf(
-                    "https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=800&q=80",
-                    "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80",
-                    "https://images.unsplash.com/photo-1535083783855-76ae62b2914e?w=800&q=80"
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Murchison_Falls_-_by_Boschlech.jpg/500px-Murchison_Falls_-_by_Boschlech.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Murchison_falls_National_Park.2.jpg/500px-Murchison_falls_National_Park.2.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Giraffe_in_Murchison_Falls_National_Park_Uganda_10.jpg/640px-Giraffe_in_Murchison_Falls_National_Park_Uganda_10.jpg"
                 ),
-                thumbnailUrl = "https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=800&q=80",
+                thumbnailUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Murchison_Falls_-_by_Boschlech.jpg/500px-Murchison_Falls_-_by_Boschlech.jpg",
                 nearbyAccommodations = listOf(
                     Accommodation(
                         name = "Paraa Safari Lodge",
@@ -102,11 +102,11 @@ object AttractionsData {
                     "Volcanic crater lakes and explosion craters"
                 ),
                 imageUrls = listOf(
-                    "https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=800&q=80",
-                    "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=80",
-                    "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&q=80"
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hippopotami_in_the_Kazinga_Channel%2C_Queen_Elizabeth_National_Park.jpg/500px-Hippopotami_in_the_Kazinga_Channel%2C_Queen_Elizabeth_National_Park.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Tree_lion_2.jpg/500px-Tree_lion_2.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Ugandan_defassa_waterbuck_%28Kobus_ellipsiprymnus_defassa%29_juvenile_male.jpg/640px-Ugandan_defassa_waterbuck_%28Kobus_ellipsiprymnus_defassa%29_juvenile_male.jpg"
                 ),
-                thumbnailUrl = "https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=800&q=80",
+                thumbnailUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hippopotami_in_the_Kazinga_Channel%2C_Queen_Elizabeth_National_Park.jpg/500px-Hippopotami_in_the_Kazinga_Channel%2C_Queen_Elizabeth_National_Park.jpg",
                 nearbyAccommodations = listOf(
                     Accommodation(
                         name = "Mweya Safari Lodge",
@@ -142,11 +142,11 @@ object AttractionsData {
                     "Full-day chimp habituation experiences available"
                 ),
                 imageUrls = listOf(
-                    "https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=800&q=80",
-                    "https://images.unsplash.com/photo-1615963244664-5b845b2025ee?w=800&q=80",
-                    "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80"
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/2004-03-27-Chimpanzee-eatin.jpg/500px-2004-03-27-Chimpanzee-eatin.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Red_colobus_kibale.JPG/500px-Red_colobus_kibale.JPG",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Kibale_chimp.jpg/500px-Kibale_chimp.jpg"
                 ),
-                thumbnailUrl = "https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=800&q=80",
+                thumbnailUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/2004-03-27-Chimpanzee-eatin.jpg/500px-2004-03-27-Chimpanzee-eatin.jpg",
                 nearbyAccommodations = listOf(
                     Accommodation(
                         name = "Primate Lodge Kibale",
@@ -182,11 +182,11 @@ object AttractionsData {
                     "Multiple adventure activities: kayaking, quad biking, jet boating"
                 ),
                 imageUrls = listOf(
-                    "https://images.unsplash.com/photo-1583416750470-965b2707b355?w=800&q=80",
-                    "https://images.unsplash.com/photo-1474524955719-b9f87c50ce47?w=800&q=80",
-                    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80"
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Source_of_the_Nile_1.jpg/640px-Source_of_the_Nile_1.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/White_Nile_Fishermen_%2818156464842%29.jpg/500px-White_Nile_Fishermen_%2818156464842%29.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Source_of_Nile%2C_Spring_at_Jinja%2C_Lake_Victoria.jpg/500px-Source_of_Nile%2C_Spring_at_Jinja%2C_Lake_Victoria.jpg"
                 ),
-                thumbnailUrl = "https://images.unsplash.com/photo-1583416750470-965b2707b355?w=800&q=80",
+                thumbnailUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Source_of_the_Nile_1.jpg/640px-Source_of_the_Nile_1.jpg",
                 nearbyAccommodations = listOf(
                     Accommodation(
                         name = "Wildwaters Lodge",
@@ -222,11 +222,11 @@ object AttractionsData {
                     "Cultural experiences with Sabiny people"
                 ),
                 imageUrls = listOf(
-                    "https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80",
-                    "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&q=80",
-                    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Sipi_Falls2.jpg/500px-Sipi_Falls2.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Sipi_Falls_-_2748970669.jpg/640px-Sipi_Falls_-_2748970669.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Sipi_Falls_-_242724097.jpg/640px-Sipi_Falls_-_242724097.jpg"
                 ),
-                thumbnailUrl = "https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80",
+                thumbnailUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Sipi_Falls2.jpg/500px-Sipi_Falls2.jpg",
                 nearbyAccommodations = listOf(
                     Accommodation(
                         name = "Sipi River Lodge",
@@ -262,11 +262,11 @@ object AttractionsData {
                     "Terraced hillsides creating stunning landscapes"
                 ),
                 imageUrls = listOf(
-                    "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?w=800&q=80",
-                    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-                    "https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=800&q=80"
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Lake_Bunyonyi_%288146148093%29.jpg/500px-Lake_Bunyonyi_%288146148093%29.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Punishment_Island.jpg/500px-Punishment_Island.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Lake_Bunyonyi_camp_%288218595593%29.jpg/500px-Lake_Bunyonyi_camp_%288218595593%29.jpg"
                 ),
-                thumbnailUrl = "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?w=800&q=80",
+                thumbnailUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Lake_Bunyonyi_%288146148093%29.jpg/500px-Lake_Bunyonyi_%288146148093%29.jpg",
                 nearbyAccommodations = listOf(
                     Accommodation(
                         name = "Bird Nest Resort",
@@ -302,11 +302,11 @@ object AttractionsData {
                     "Multi-day trekking expeditions (7-12 days)"
                 ),
                 imageUrls = listOf(
-                    "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&q=80",
-                    "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
-                    "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800&q=80"
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Rwenzori_mountains_FP.jpg/500px-Rwenzori_mountains_FP.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/1172_ruwenzori.jpg/640px-1172_ruwenzori.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Snow_caped_Rwenzori_Mountain.jpg/640px-Snow_caped_Rwenzori_Mountain.jpg"
                 ),
-                thumbnailUrl = "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&q=80",
+                thumbnailUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Rwenzori_mountains_FP.jpg/500px-Rwenzori_mountains_FP.jpg",
                 nearbyAccommodations = listOf(
                     Accommodation(
                         name = "Ruboni Community Camp",
@@ -342,11 +342,11 @@ object AttractionsData {
                     "Cultural encounters with Karamojong people"
                 ),
                 imageUrls = listOf(
-                    "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=800&q=80",
-                    "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80",
-                    "https://images.unsplash.com/photo-1535083783855-76ae62b2914e?w=800&q=80"
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Nataba_Track%2C_Kidepo_Valley_National_Park.jpg/500px-Nataba_Track%2C_Kidepo_Valley_National_Park.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Maneless_zebras_at_Kidepo_Valley_NP_-_Uganda.jpg/500px-Maneless_zebras_at_Kidepo_Valley_NP_-_Uganda.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Elephants_in_Kidepo_Valley_National_Park_02.jpg/500px-Elephants_in_Kidepo_Valley_National_Park_02.jpg"
                 ),
-                thumbnailUrl = "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=800&q=80",
+                thumbnailUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Nataba_Track%2C_Kidepo_Valley_National_Park.jpg/500px-Nataba_Track%2C_Kidepo_Valley_National_Park.jpg",
                 nearbyAccommodations = listOf(
                     Accommodation(
                         name = "Apoka Safari Lodge",
@@ -382,11 +382,11 @@ object AttractionsData {
                     "Easy hiking trails and picnic facilities"
                 ),
                 imageUrls = listOf(
-                    "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&q=80",
-                    "https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80",
-                    "https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=800&q=80"
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Ssezibwa_Falls1.jpg/500px-Ssezibwa_Falls1.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Ssezibwa_Falls.jpg/500px-Ssezibwa_Falls.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Sezibwa_falls.jpg/500px-Sezibwa_falls.jpg"
                 ),
-                thumbnailUrl = "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&q=80",
+                thumbnailUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Ssezibwa_Falls1.jpg/500px-Ssezibwa_Falls1.jpg",
                 nearbyAccommodations = listOf(
                     Accommodation(
                         name = "Ssezibwa Falls Resort",
@@ -422,11 +422,11 @@ object AttractionsData {
                     "Insight into Buganda Kingdom history"
                 ),
                 imageUrls = listOf(
-                    "https://images.unsplash.com/photo-1585128792304-b8f4c6c35e3f?w=800&q=80",
-                    "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80",
-                    "https://images.unsplash.com/photo-1604537466158-719b1972feb8?w=800&q=80"
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Kampala_Kasubi_Tombs.jpg/500px-Kampala_Kasubi_Tombs.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Kampalas_Kasubi_Tombs_%282064308892%29.jpg/640px-Kampalas_Kasubi_Tombs_%282064308892%29.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Kampala_Kasubi_Tombs_%282063513983%29.jpg/640px-Kampala_Kasubi_Tombs_%282063513983%29.jpg"
                 ),
-                thumbnailUrl = "https://images.unsplash.com/photo-1585128792304-b8f4c6c35e3f?w=800&q=80",
+                thumbnailUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Kampala_Kasubi_Tombs.jpg/500px-Kampala_Kasubi_Tombs.jpg",
                 nearbyAccommodations = listOf(
                     Accommodation(
                         name = "Kampala Serena Hotel",
@@ -462,11 +462,11 @@ object AttractionsData {
                     "Conservation education programs"
                 ),
                 imageUrls = listOf(
-                    "https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?w=800&q=80",
-                    "https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=800&q=80",
-                    "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=800&q=80"
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Uganda_Wildlife_Conservation_Education_Centre_%28Zoo%29_in_Entebbe.jpg/500px-Uganda_Wildlife_Conservation_Education_Centre_%28Zoo%29_in_Entebbe.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Wildlife_Education_Centre_Entebbe.jpg/640px-Wildlife_Education_Centre_Entebbe.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Chimpanzee_meeting_-_Uganda_Wildlife_Conservation_Centre_Entebbe.jpg/640px-Chimpanzee_meeting_-_Uganda_Wildlife_Conservation_Centre_Entebbe.jpg"
                 ),
-                thumbnailUrl = "https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?w=800&q=80",
+                thumbnailUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Uganda_Wildlife_Conservation_Education_Centre_%28Zoo%29_in_Entebbe.jpg/500px-Uganda_Wildlife_Conservation_Education_Centre_%28Zoo%29_in_Entebbe.jpg",
                 nearbyAccommodations = listOf(
                     Accommodation(
                         name = "Protea Hotel Entebbe",
@@ -502,11 +502,11 @@ object AttractionsData {
                     "Conservation education programs"
                 ),
                 imageUrls = listOf(
-                    "https://images.unsplash.com/photo-1615963244664-5b845b2025ee?w=800&q=80",
-                    "https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=800&q=80",
-                    "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?w=800&q=80"
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Ngamba_Island_Chimpanzee_Sanctuary-The_camp.jpg/500px-Ngamba_Island_Chimpanzee_Sanctuary-The_camp.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ngamba_Island_Chimpanzee_Sanctuary_-_Pallet.jpg/640px-Ngamba_Island_Chimpanzee_Sanctuary_-_Pallet.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Ngamba_Island_Chimpanzee_Sanctuary_-_Camp.jpg/500px-Ngamba_Island_Chimpanzee_Sanctuary_-_Camp.jpg"
                 ),
-                thumbnailUrl = "https://images.unsplash.com/photo-1615963244664-5b845b2025ee?w=800&q=80",
+                thumbnailUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Ngamba_Island_Chimpanzee_Sanctuary-The_camp.jpg/500px-Ngamba_Island_Chimpanzee_Sanctuary-The_camp.jpg",
                 nearbyAccommodations = listOf(
                     Accommodation(
                         name = "Ngamba Island Tented Camp",
@@ -542,11 +542,11 @@ object AttractionsData {
                     "Closest savanna park to Kampala"
                 ),
                 imageUrls = listOf(
-                    "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&q=80",
-                    "https://images.unsplash.com/photo-1535083783855-76ae62b2914e?w=800&q=80",
-                    "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?w=800&q=80"
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Mburo_National_Park_01.JPG/500px-Mburo_National_Park_01.JPG",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Mpala_found_at_Lake_Mburo_National_park.png/500px-Mpala_found_at_Lake_Mburo_National_park.png",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Impalas_sleeping_at_night_in_Lake_Mburo_National_Park.jpg/500px-Impalas_sleeping_at_night_in_Lake_Mburo_National_Park.jpg"
                 ),
-                thumbnailUrl = "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&q=80",
+                thumbnailUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Mburo_National_Park_01.JPG/500px-Mburo_National_Park_01.JPG",
                 nearbyAccommodations = listOf(
                     Accommodation(
                         name = "Mihingo Lodge",
@@ -582,11 +582,11 @@ object AttractionsData {
                     "Convenient stopover between Kampala and Murchison Falls"
                 ),
                 imageUrls = listOf(
-                    "https://images.unsplash.com/photo-1598524722512-0c0ccb5a533f?w=800&q=80",
-                    "https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?w=800&q=80",
-                    "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?w=800&q=80"
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Ziwa_Reserve.jpg/330px-Ziwa_Reserve.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Ziwa_rhinos.jpg/330px-Ziwa_rhinos.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Ziwa_Rhino_Sanctuary.jpg/640px-Ziwa_Rhino_Sanctuary.jpg"
                 ),
-                thumbnailUrl = "https://images.unsplash.com/photo-1598524722512-0c0ccb5a533f?w=800&q=80",
+                thumbnailUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Ziwa_Reserve.jpg/330px-Ziwa_Reserve.jpg",
                 nearbyAccommodations = listOf(
                     Accommodation(
                         name = "Amuka Safari Lodge",
@@ -622,11 +622,11 @@ object AttractionsData {
                     "Over 300 bird species including rare Lammergeier"
                 ),
                 imageUrls = listOf(
-                    "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800&q=80",
-                    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-                    "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80"
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Mount_Elgon_-_16044068524.jpg/640px-Mount_Elgon_-_16044068524.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Mount_Elgon_Forest.jpg/500px-Mount_Elgon_Forest.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Mount_Elgon_National_Park_3.jpg/640px-Mount_Elgon_National_Park_3.jpg"
                 ),
-                thumbnailUrl = "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800&q=80",
+                thumbnailUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Mount_Elgon_-_16044068524.jpg/640px-Mount_Elgon_-_16044068524.jpg",
                 nearbyAccommodations = listOf(
                     Accommodation(
                         name = "Mount Elgon Hotel",
@@ -654,7 +654,7 @@ object AttractionsData {
     }
     
     fun getAttractionsByCategory(category: String): List<Attraction> {
-        return getAllAttractions().filter { it.category == category }
+        return getAllAttractions().filter { it.category.contains(category, ignoreCase = true) }
     }
     
     fun searchAttractions(query: String): List<Attraction> {
