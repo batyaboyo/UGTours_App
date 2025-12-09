@@ -20,16 +20,16 @@
         "source": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-main-59:\\drawable\\ic_home.xml"
     },
     {
-        "merged": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-merged_res-57:\\layout_item_featured_attraction.xml.flat",
-        "source": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-main-59:\\layout\\item_featured_attraction.xml"
+        "merged": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-merged_res-57:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-main-59:\\layout\\fragment_home.xml"
     },
     {
         "merged": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-merged_res-57:\\layout_fragment_settings.xml.flat",
         "source": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-main-59:\\layout\\fragment_settings.xml"
     },
     {
-        "merged": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-merged_res-57:\\layout_fragment_home.xml.flat",
-        "source": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-main-59:\\layout\\fragment_home.xml"
+        "merged": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-merged_res-57:\\layout_item_featured_attraction.xml.flat",
+        "source": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-main-59:\\layout\\item_featured_attraction.xml"
     },
     {
         "merged": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-merged_res-57:\\mipmap-hdpi_ic_launcher_round.png.flat",
@@ -84,8 +84,16 @@
         "source": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-main-59:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "com.ugtours.app-merged_res-57:/drawable_ic_launcher_foreground.png.flat",
+        "source": "com.ugtours.app-main-59:/drawable/ic_launcher_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-merged_res-57:\\layout_item_category.xml.flat",
         "source": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-main-59:\\layout\\item_category.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-57:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.ugtours.app-main-59:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
         "merged": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-merged_res-57:\\mipmap-xxxhdpi_ic_launcher.png.flat",
@@ -120,10 +128,6 @@
         "source": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-main-59:\\drawable\\gradient_overlay.xml"
     },
     {
-        "merged": "com.ugtours.app-merged_res-57:/layout_fragment_settings.xml.flat",
-        "source": "com.ugtours.app-main-59:/layout/fragment_settings.xml"
-    },
-    {
         "merged": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-merged_res-57:\\drawable_ic_profile.xml.flat",
         "source": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-main-59:\\drawable\\ic_profile.xml"
     },
@@ -138,10 +142,6 @@
     {
         "merged": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-merged_res-57:\\drawable_hero_gradient.xml.flat",
         "source": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-main-59:\\drawable\\hero_gradient.xml"
-    },
-    {
-        "merged": "com.ugtours.app-merged_res-57:/layout_activity_main.xml.flat",
-        "source": "com.ugtours.app-main-59:/layout/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-merged_res-57:\\xml_data_extraction_rules.xml.flat",
@@ -174,6 +174,10 @@
     {
         "merged": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-merged_res-57:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-main-59:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.ugtours.app-merged_res-57:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.ugtours.app-main-59:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
         "merged": "C:\\Users\\batzt\\.gradle\\daemon\\9.0-milestone-1\\com.ugtours.app-merged_res-57:\\drawable_indicator_inactive.xml.flat",

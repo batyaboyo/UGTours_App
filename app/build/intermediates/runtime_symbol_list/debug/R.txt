@@ -3107,6 +3107,7 @@ int drawable ic_favorite 0x7f070095
 int drawable ic_favorite_filled 0x7f070096
 int drawable ic_home 0x7f070097
 int drawable ic_keyboard_black_24dp 0x7f070098
+int drawable ic_launcher_foreground 0x7f0700f2
 int drawable ic_location 0x7f070099
 int drawable ic_m3_chip_check 0x7f07009a
 int drawable ic_m3_chip_checked_circle 0x7f07009b
