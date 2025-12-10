@@ -1,62 +1,240 @@
-# UGTours: Extended Video Demonstration Script
+# UGTours: Video Demonstration Script
 
-**Target Duration:** ~5 Minutes
-**Demonstrator:** Batya Tonny Boyo
+**Target Duration:** 5 Minutes  
+**Demonstrator:** Batya Tonny Boyo  
+**Format:** Screen Recording with Voiceover
 
 ---
 
-## 0:00 - 0:40 | Introduction & Context
-**Visual:** [Start with a title card "UGTours: Final Year Project". Fade to App Icon on phone screen. Launch App.]
-**Audio (Voiceover):**
-"Welcome to the demonstration of **UGTours**, my final year project. Tourism is one of Uganda's biggest assets, yet for many travelers, finding reliable, centralized information is a struggle. We often rely on word-of-mouth or fragmented websites.
-UGTours functions as a comprehensive, offline-first digital guide. It's designed to help tourists—both local and international—discover attractions, understand costs in their local currency, and navigate their journey with confidence."
+## 0:00 - 0:35 | Introduction & Context
 
-## 0:40 - 1:20 | User Onboarding (Authentication)
-**Visual:** [App launches to Login Screen. Taps 'Register Account'. Fills in: Name (e.g., 'Batya Tonny'), Email, Password. Taps 'Sign Up'. Spinner shows loading. Success Toast.]
-**Audio (Voiceover):**
-"The journey begins with security. We don't just want anonymous users; we want a personalized experience.
-Here, I am registering a new account. The system validates my credentials in real-time, ensuring data integrity. Once registered, I'm automatically logged in.
-This authentication layer is crucial for features we'll see later, like saving favorites and managing user profiles."
+**Visual:**
+- Title card: "UGTours - Your Digital Guide to Uganda"
+- Subtitle: "Final Year Project by Batya Tonny Boyo"
+- Fade to phone home screen showing UGTours app icon
+- Tap icon to launch app
 
-## 1:20 - 2:00 | The Dashboard & Discovery
-**Visual:** [Home Screen loads. Slow scroll down. Horizontal swipe on 'Popular Destinations'. Tap on 'Categories' chip (e.g., 'National Parks').]
-**Audio (Voiceover):**
-"We have arrived at the Home Dashboard. The interface is built using Material Design principles for a clean, intuitive look.
-At the top, we have our 'Popular Destinations' slider, showcasing the gems of Uganda. Below, we have categorized lists.
-Whether I'm interested in 'Cultural Sites' or 'Adventure', the app filters the content instantly. Notice how smooth the scrolling is—this is powered by the MVVM architecture handling data efficiently in the background."
+**Voiceover:**
 
-## 2:00 - 2:40 | Smart Search & Navigation
-**Visual:** [Tap Search Icon. Type 'Falls'. List filters to 'Murchison Falls', 'Sipi Falls', 'Ssezibwa Falls'. Clear text. Type 'Nile'. Select 'Jinja - Source of the Nile'.]
-**Audio (Voiceover):**
-"Let's say I have a specific interest. I can use the Smart Search feature.
-As I type 'Falls', the list updates dynamically. It searches not just names, but descriptions too.
-Let's select 'Jinja - Source of the Nile'.
-This seamless navigation ensures that users verify their destination before committing to a trip."
+"Welcome to UGTours, my final year project addressing a real challenge in Uganda's tourism industry.
 
-## 2:40 - 3:25 | Deep Dive & Favorites Feature
-**Visual:** [In Detail View for Jinja. Scroll text. Swipe through image gallery. Tap the 'Heart' icon (Favorite). Go back. Navigate to 'Saved'/'Favorites' tab. Show Jinja listed there.]
-**Audio (Voiceover):**
-"Inside the Attraction View, we get the full story. Historical context, key activities, and high-resolution imagery.
-Now, imagine I'm planning a trip for next month. I can tap this 'Heart' icon to save it to my Favorites.
-If I navigate to my 'Saved' tab, there it is. This local persistence allows me to build a personalized itinerary that I can access even when I'm deep in the village without internet access."
+Uganda is known as the Pearl of Africa, blessed with incredible natural beauty and wildlife. Yet tourists face a common problem: information is scattered across multiple websites, internet connectivity is unreliable in remote areas, and currency conversion creates constant confusion.
 
-## 3:25 - 4:05 | Accommodation & The Pricing Engine
-**Visual:** [Go back to an Attraction (e.g., Bwindi). Scroll to 'Nearby Accommodations'. Pause on a price tag.]
-**Audio (Voiceover):**
-"Here is arguably the most practical feature of UGTours: The Pricing Engine.
-Tourists often struggle with currency conversion. Lodges quote in Dollars; locals pay in Shillings.
-Look at 'Buhoma Lodge'. The app reads the USD price range—say, $400—and *automatically* calculates the Uganda Shilling equivalent (approx. 1.4 million UGX) using a real-time logical conversion.
-This dual-display eliminates confusion and helps users budget accurately on the spot."
+UGTours solves these challenges. It's an offline-first mobile application that serves as your complete digital guide to Uganda - from discovering attractions to booking accommodations, all without needing an internet connection."
 
-## 4:05 - 4:40 | Profile & Settings
-**Visual:** [Navigate to Profile Tab. Show User Details. Click 'Edit Profile'. Change Name. Save. Go to Settings. Toggle a switch (e.g., Notifications). Logout.]
-**Audio (Voiceover):**
-"Finally, the app puts the user in control. In the Profile section, I can manage my personal details.
-I can also visit Settings to customize my experience or log out securely.
-The app remembers my preferences using Android DataStore, ensuring that when I return, the app feels exactly how I left it."
+---
 
-## 4:40 - 5:00 | Conclusion
-**Visual:** [Return to Login Screen. Fade to Black with "Thank You" text.]
-**Audio (Voiceover):**
-"UGTours is more than just a list of places; it's a complete travel tool. By combining robust architecture with user-centric features like offline access and currency conversion, it solves real problems for Ugandan tourism.
-My name is Batya Tonny Boyo. Thank you for watching."
+## 0:35 - 1:10 | User Authentication & Security
+
+**Visual:**
+- App opens to login screen
+- Tap "Create Account"
+- Fill in registration form:
+  - Name: "Batya Tonny"
+  - Email: "batya@example.com"
+  - Password: (hidden characters)
+- Tap "Sign Up" button
+- Loading spinner appears
+- Success message: "Account created successfully"
+- Automatic login to home screen
+
+**Voiceover:**
+
+"Let's start by creating an account. Security is fundamental to UGTours.
+
+I'll register with my name, email, and password. Behind the scenes, the app uses BCrypt hashing to securely store credentials - plain text passwords are never saved to the database.
+
+Once registered, I'm automatically logged in. This authentication system enables personalized features like saving favorites and managing bookings, all tied securely to my account."
+
+---
+
+## 1:10 - 1:50 | Home Dashboard & Discovery
+
+**Visual:**
+- Home screen fully loaded
+- Slow scroll through "Featured Attractions" section
+- Swipe horizontally through popular destinations carousel
+- Show category chips: "National Parks", "Cultural Sites", "Waterfalls", "Adventure"
+- Tap "National Parks" chip
+- List filters to show only national parks
+- Tap chip again to clear filter
+
+**Voiceover:**
+
+"Welcome to the home dashboard. The interface follows Material Design 3 principles for a clean, modern look.
+
+At the top, we have featured attractions showcasing Uganda's most popular destinations. Users can swipe through this carousel to get inspired.
+
+Below, attractions are organized by categories. If I'm specifically interested in National Parks, I simply tap the category chip and the list filters instantly. The smooth performance you're seeing is powered by the MVVM architecture pattern, which efficiently manages data and UI updates.
+
+This makes discovering Uganda's treasures intuitive and enjoyable."
+
+---
+
+## 1:50 - 2:30 | Smart Search & Navigation
+
+**Visual:**
+- Tap search icon in toolbar
+- Type "Falls" slowly
+- List dynamically filters showing:
+  - Murchison Falls National Park
+  - Sipi Falls
+  - Ssezibwa Falls
+- Clear search
+- Type "Gorilla"
+- Results show Bwindi Impenetrable National Park
+- Tap on "Bwindi Impenetrable National Park"
+- Attraction detail page loads
+
+**Voiceover:**
+
+"Finding specific destinations is effortless with the smart search feature.
+
+Watch as I type 'Falls' - the results update in real-time, searching through both attraction names and descriptions. I can see Murchison Falls, Sipi Falls, and more.
+
+Let me search for something else - 'Gorilla'. Instantly, Bwindi Impenetrable National Park appears, home to Uganda's famous mountain gorillas.
+
+I'll tap to explore this attraction in detail. This dynamic search ensures tourists can quickly find exactly what they're looking for, even with partial information."
+
+---
+
+## 2:30 - 3:20 | Attraction Details & Favorites
+
+**Visual:**
+- Attraction detail page for Bwindi showing:
+  - Image gallery at top
+- Swipe through 3-4 high-quality images
+- Scroll down to show:
+  - Detailed description
+  - Unique features section
+  - Location information
+- Tap the heart/star icon (favorite button)
+- Icon fills with color and brief animation
+- Toast message: "Added to favorites"
+- Navigate back
+- Tap "Favorites" tab in bottom navigation
+- Show Bwindi now listed in favorites
+
+**Voiceover:**
+
+"Inside each attraction, users get the complete picture. There's a beautiful image gallery showcasing the destination from multiple angles.
+
+Below, we have comprehensive information - the history, unique features, and what makes this place special. For Bwindi, we highlight the mountain gorilla trekking experience, one of the most sought-after wildlife encounters in the world.
+
+Now, imagine I'm planning a trip for next month. With one tap on this heart icon, I save Bwindi to my favorites.
+
+When I navigate to the Favorites tab, there it is. This feature is perfect for building a personalized itinerary. And here's the key advantage - all this data is stored locally using Room database, so I can access my saved attractions even in remote areas without any internet connection."
+
+---
+
+## 3:20 - 4:10 | Accommodation & Dual Currency Pricing
+
+**Visual:**
+- Return to Bwindi attraction detail
+- Scroll down to "Nearby Accommodations" section
+- Show list of accommodations with dual pricing:
+  - "Buhoma Lodge: $400-600 (UGX 1,416,000 - 2,124,000)"
+  - "Gorilla Forest Camp: $350 (UGX 1,239,000)"
+- Pause on pricing to highlight
+- Tap "Book Now" on one accommodation
+- Booking dialog appears showing:
+  - Accommodation name and price
+  - Check-in date selector
+  - Check-out date selector
+  - Number of guests field
+  - Automatic total calculation in both currencies
+  - Special requests field
+
+**Voiceover:**
+
+"Here's one of the most practical features of UGTours: the intelligent pricing engine.
+
+Tourists constantly struggle with currency conversion. Lodges advertise prices in US Dollars, but payments are made in Ugandan Shillings. This creates confusion and uncertainty.
+
+Look at Buhoma Lodge here. The app displays the price as four hundred dollars, and immediately shows the Uganda Shilling equivalent - one million, four hundred sixteen thousand shillings. The conversion uses the current exchange rate of one dollar equals three thousand five hundred forty shillings.
+
+This dual-currency display eliminates mental math and helps tourists budget accurately on the spot. Whether you think in dollars or shillings, you have complete financial clarity.
+
+When I tap 'Book Now', I can select my dates, specify the number of guests, and the app automatically calculates the total cost in both currencies. I can even add special requests like 'window view preferred' or dietary requirements."
+
+---
+
+## 4:10 - 4:45 | Booking Management & Profile
+
+**Visual:**
+- Complete the booking (tap "Confirm Booking")
+- Success message appears
+- Navigate to "Bookings" tab
+- Show the newly created booking with:
+  - Accommodation name
+  - Dates
+  - Total price in both currencies
+  - Status: "Pending"
+- Navigate to "Profile" tab
+- Show user information displayed
+- Scroll to show settings options
+- Tap "Logout" button
+- Confirmation dialog appears
+- Confirm logout
+- Return to login screen
+
+**Voiceover:**
+
+"After confirming the booking, it's saved to my account. In the Bookings tab, I can see all my reservations with complete details - dates, pricing, and status.
+
+This booking management system helps tourists keep track of their entire trip in one place.
+
+In the Profile section, I can view and edit my account information. When I'm ready, I can securely log out.
+
+The beauty of this system is that all my data - favorites, bookings, and preferences - is safely stored. When I log back in, everything is exactly as I left it, thanks to secure local data persistence."
+
+---
+
+## 4:45 - 5:00 | Conclusion
+
+**Visual:**
+- Login screen visible
+- Fade to black
+- Display text:
+  - "UGTours"
+  - "Developed by Batya Tonny Boyo"
+  - "GitHub: @batyaboyo"
+- Fade out
+
+**Voiceover:**
+
+"UGTours is more than just a list of destinations. It's a complete travel companion that solves real problems - from offline accessibility to currency confusion to booking management.
+
+By combining modern Android architecture with user-focused features, UGTours has the potential to transform how people experience Uganda's tourism industry.
+
+Thank you for watching."
+
+---
+
+## Technical Notes for Recording
+
+### Audio Quality
+- Use a quality microphone in a quiet environment
+- Speak clearly and at a moderate pace
+- Add subtle background music (optional, low volume)
+
+### Video Quality
+- Record at 1080p minimum
+- Use screen recording software (e.g., ADB screenrecord, scrcpy)
+- Ensure smooth frame rate (30fps minimum)
+
+### Editing Tips
+- Add smooth transitions between sections
+- Highlight UI elements with subtle circles/arrows when needed
+- Include text overlays for key features:
+  - "Offline-First Architecture"
+  - "Dual Currency Pricing"
+  - "Secure Authentication"
+  - "Smart Search"
+- Keep total duration under 5 minutes for engagement
+
+### Pacing
+- Don't rush through screens
+- Pause briefly on important information
+- Allow animations to complete
+- Match voiceover timing with visual actions

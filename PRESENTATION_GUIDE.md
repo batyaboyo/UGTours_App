@@ -514,58 +514,109 @@ COMPLIANCE
 
 ### Demo Script
 
-**1. Launch App (15 sec)**
-- Open UGTours on emulator/device
-- Show splash screen → Home screen
+**INTRODUCTION (5 seconds)**
+"Now let me walk you through a live demonstration of UGTours to show you how everything works in practice."
 
-**2. Browse Attractions (45 sec)**
-- Scroll through featured attractions
-- Click on "Bwindi Impenetrable National Park"
-- Show image gallery (swipe through images)
-- Scroll to view description and unique features
-- Return to list
+---
 
-**3. Search & Filter (30 sec)**
+**1. APP LAUNCH (15 seconds)**
+
+*Actions:*
+- Open UGTours app on device/emulator
+- Wait for splash screen
+- Home screen appears
+
+*Say:*
+"Here's the app launching. You'll see our splash screen, and then we land on the home screen where users can immediately start exploring Uganda's attractions."
+
+---
+
+**2. BROWSING ATTRACTIONS (45 seconds)**
+
+*Actions:*
+- Scroll slowly through the featured attractions list
+- Tap on "Bwindi Impenetrable National Park"
+- Swipe through the image gallery (2-3 images)
+- Scroll down to show the description
+- Highlight unique features section
+- Press back to return to list
+
+*Say:*
+"Let's explore some attractions. I'll tap on Bwindi Impenetrable National Park, home to the mountain gorillas. Notice the beautiful image gallery here - users can swipe through multiple high-quality photos. Below, we have detailed descriptions and unique features that make each destination special. All of this content is available completely offline."
+
+---
+
+**3. SEARCH & FILTERING (30 seconds)**
+
+*Actions:*
 - Navigate to Attractions tab
-- Use search bar: type "Falls"
-- Show filtered results
+- Tap search bar and type "Falls"
+- Show filtered results (Murchison Falls, Sipi Falls)
 - Clear search
-- Click category filter: "National Park"
-- Show filtered attractions
+- Tap "National Park" category chip
+- Show filtered results
 
-**4. Favorites (20 sec)**
-- Open an attraction detail
-- Click favorite button (star icon)
+*Say:*
+"Users can easily find what they're looking for. Watch as I search for 'Falls' - the results update instantly. I can also filter by category. Let me select 'National Park' and you'll see only national parks are displayed. This makes trip planning much more efficient."
+
+---
+
+**4. FAVORITES FEATURE (20 seconds)**
+
+*Actions:*
+- Open any attraction detail page
+- Tap the star/favorite icon (show animation)
 - Navigate to Favorites tab
-- Show saved attraction
+- Show the saved attraction
 
-**5. Accommodation & Booking (60 sec)**
-- Return to attraction detail
+*Say:*
+"If users find something they like, they can save it to favorites with one tap. See that star icon? Now when I go to the Favorites tab, the attraction is saved here for quick access later."
+
+---
+
+**5. ACCOMMODATION & BOOKING (75 seconds)**
+
+*Actions:*
+- Return to an attraction detail page
 - Scroll to accommodations section
-- Point out dual pricing: "$400 (UGX 1,416,000)"
-- Click "Book Now" on an accommodation
-- Show booking dialog:
-  - Select check-in date
-  - Select check-out date
-  - Enter number of guests
-  - Show automatic price calculation
-  - Add special request
-  - Confirm booking
+- Point to dual pricing display
+- Tap "Book Now" on an accommodation
+- In booking dialog:
+  - Select check-in date (e.g., tomorrow)
+  - Select check-out date (e.g., 3 days later)
+  - Enter number of guests (e.g., 2)
+  - Pause to show auto-calculated total
+  - Type a special request (e.g., "Window view preferred")
+  - Tap "Confirm Booking"
 - Navigate to Bookings tab
-- Show created booking
+- Show the newly created booking
 
-**6. Profile (15 sec)**
+*Say:*
+"Now here's where it gets really useful. Each attraction shows nearby accommodations. Notice the pricing here - it displays both USD and Ugandan Shillings side by side. This eliminates any confusion about costs.
+
+Let me make a booking. I'll tap 'Book Now', select my check-in and check-out dates, add the number of guests - and watch this - the total price calculates automatically in both currencies. I can even add special requests like 'window view preferred'.
+
+After confirming, the booking is saved. If I navigate to the Bookings tab, there it is - complete with all the details, dates, and pricing. Users can track all their reservations in one place."
+
+---
+
+**6. PROFILE & LOGOUT (15 seconds)**
+
+*Actions:*
 - Navigate to Profile tab
-- Show user information
-- Demonstrate logout
+- Show user information displayed
+- Tap logout button
+- Return to login screen
 
-### Talking Points During Demo
-- "Let me demonstrate the app in action"
-- "Notice how smooth the navigation is"
-- "The image gallery uses ViewPager2 for seamless swiping"
-- "See how the dual currency pricing is displayed clearly"
-- "The booking dialog calculates prices in real-time"
-- "All this data persists even when offline"
+*Say:*
+"Finally, in the Profile section, users can view their account information and securely log out when needed. All their data - favorites, bookings, viewing history - is safely stored and will be there when they log back in."
+
+---
+
+**DEMO CONCLUSION (5 seconds)**
+
+*Say:*
+"And that's UGTours in action - a complete, offline-capable tourism guide right in your pocket."
 
 ---
 
