@@ -8,7 +8,8 @@ import com.ugtours.databinding.ItemAccommodationBinding
 import com.ugtours.models.Accommodation
 
 class AccommodationAdapter(
-    private val accommodations: List<Accommodation>
+    private val accommodations: List<Accommodation>,
+    private val onBookClick: (Accommodation) -> Unit = {}
 ) : RecyclerView.Adapter<AccommodationAdapter.AccommodationViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AccommodationViewHolder {
@@ -21,7 +22,7 @@ class AccommodationAdapter(
     }
 
     override fun onBindViewHolder(holder: AccommodationViewHolder, position: Int) {
-        holder.bind(accommodations[position])
+        holder.bind(accommodations[position], onBookClick)
     }
 
     override fun getItemCount() = accommodations.size
@@ -30,13 +31,18 @@ class AccommodationAdapter(
         private val binding: ItemAccommodationBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(accommodation: Accommodation) {
+        fun bind(accommodation: Accommodation, onBookClick: (Accommodation) -> Unit) {
             binding.accommodationName.text = accommodation.name
             binding.accommodationType.text = accommodation.type
             binding.accommodationPrice.text = formatPrice(accommodation.priceRange)
             binding.accommodationDistance.text = accommodation.distanceFromAttraction
             binding.accommodationRating.text = String.format("%.1f/5.0", accommodation.rating)
             binding.accommodationContact.text = accommodation.contact
+            
+            // Handle book button click
+            binding.btnBookNow.setOnClickListener {
+                onBookClick(accommodation)
+            }
         }
 
         private fun formatPrice(priceRange: String): String {

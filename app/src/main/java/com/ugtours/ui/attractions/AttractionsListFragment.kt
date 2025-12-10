@@ -114,6 +114,9 @@ class AttractionsListFragment : Fragment() {
                     binding.emptyView.visibility = View.VISIBLE
                     binding.attractionsRecyclerView.visibility = View.GONE
                 }
+                UiState.Idle -> {
+                    // Initial state, do nothing
+                }
             }
         }
     }

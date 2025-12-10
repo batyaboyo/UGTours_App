@@ -4,24 +4,27 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.ugtours.data.local.dao.BookingsDao
 import com.ugtours.data.local.dao.FavoritesDao
 import com.ugtours.data.local.dao.RecentlyViewedDao
 import com.ugtours.data.local.dao.UserDao
+import com.ugtours.data.local.entities.BookingEntity
 import com.ugtours.data.local.entities.FavoriteEntity
 import com.ugtours.data.local.entities.RecentlyViewedEntity
 import com.ugtours.data.local.entities.UserEntity
 
 /**
  * Room database for the UGTours application.
- * Contains tables for users, favorites, and recently viewed attractions.
+ * Contains tables for users, favorites, recently viewed attractions, and bookings.
  */
 @Database(
     entities = [
         UserEntity::class,
         FavoriteEntity::class,
-        RecentlyViewedEntity::class
+        RecentlyViewedEntity::class,
+        BookingEntity::class
     ],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
@@ -29,6 +32,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun userDao(): UserDao
     abstract fun favoritesDao(): FavoritesDao
     abstract fun recentlyViewedDao(): RecentlyViewedDao
+    abstract fun bookingsDao(): BookingsDao
     
     companion object {
         @Volatile

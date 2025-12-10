@@ -4,13 +4,19 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.ugtours.R
 import com.ugtours.databinding.ActivityAttractionDetailBinding
 import com.ugtours.ui.ViewModelFactory
+import com.ugtours.ui.bookings.BookingDialogHelper
+import com.ugtours.ui.bookings.BookingsViewModel
+import com.ugtours.ui.common.UiState
+import kotlinx.coroutines.launch
 
 /**
  * Attraction Detail Activity with MVVM architecture.
@@ -20,6 +26,10 @@ class AttractionDetailActivity : AppCompatActivity() {
     
     private lateinit var binding: ActivityAttractionDetailBinding
     private lateinit var viewModel: AttractionDetailViewModel
+    private val bookingsViewModel: BookingsViewModel by viewModels {
+        ViewModelFactory(this)
+    }
+    private lateinit var bookingDialogHelper: BookingDialogHelper
     private val indicators = mutableListOf<android.widget.ImageView>()
     
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -133,11 +143,23 @@ class AttractionDetailActivity : AppCompatActivity() {
             }
             
             // Setup accommodations list
-            val accommodationsAdapter = AccommodationAdapter(attr.nearbyAccommodations)
+            val accommodationsAdapter = AccommodationAdapter(attr.nearbyAccommodations) { accommodation ->
+                // Handle book now click
+                showBookingDialog(attr, accommodation)
+            }
             binding.accommodationsRecyclerView.apply {
                 layoutManager = LinearLayoutManager(this@AttractionDetailActivity)
                 adapter = accommodationsAdapter
             }
+            
+            // Initialize booking dialog helper
+            val prefsRepo = com.ugtours.data.repository.UserPreferencesRepository(this)
+            bookingDialogHelper = BookingDialogHelper(
+                context = this,
+                userEmail = prefsRepo.getUserEmail(),
+                userPhone = prefsRepo.getUserPhone(),
+                userId = prefsRepo.getUserId()
+            )
             
             // Setup favorite button click
             binding.fabFavorite.setOnClickListener {
@@ -175,6 +197,38 @@ class AttractionDetailActivity : AppCompatActivity() {
                 imageView.setImageResource(R.drawable.indicator_active)
             } else {
                 imageView.setImageResource(R.drawable.indicator_inactive)
+            }
+        }
+    }
+    
+    private fun showBookingDialog(attraction: com.ugtours.models.Attraction, accommodation: com.ugtours.models.Accommodation) {
+        bookingDialogHelper.showBookingDialog(attraction, accommodation) { booking ->
+            // Create the booking
+            bookingsViewModel.createBooking(booking)
+            
+            // Observe the result
+            lifecycleScope.launch {
+                bookingsViewModel.createBookingState.collect { state ->
+                    when (state) {
+                        is UiState.Success -> {
+                            Toast.makeText(
+                                this@AttractionDetailActivity,
+                                "Booking created successfully! Check the Bookings tab.",
+                                Toast.LENGTH_LONG
+                            ).show()
+                            bookingsViewModel.resetCreateBookingState()
+                        }
+                        is UiState.Error -> {
+                            Toast.makeText(
+                                this@AttractionDetailActivity,
+                                "Failed to create booking: ${state.message}",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            bookingsViewModel.resetCreateBookingState()
+                        }
+                        else -> {}
+                    }
+                }
             }
         }
     }

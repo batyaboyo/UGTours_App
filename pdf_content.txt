@@ -84,4 +84,3 @@ D. DOCUMENTATION (10 Marks)
 i. Demo Video (A short video recording while navigating your app)
 ii. Brief project report
 ********************************************END*********************************************
-3

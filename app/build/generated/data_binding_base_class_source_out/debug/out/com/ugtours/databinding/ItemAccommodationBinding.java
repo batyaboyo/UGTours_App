@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.ugtours.R;
 import java.lang.NullPointerException;
@@ -37,10 +38,14 @@ public final class ItemAccommodationBinding implements ViewBinding {
   @NonNull
   public final TextView accommodationType;
 
+  @NonNull
+  public final MaterialButton btnBookNow;
+
   private ItemAccommodationBinding(@NonNull MaterialCardView rootView,
       @NonNull TextView accommodationContact, @NonNull TextView accommodationDistance,
       @NonNull TextView accommodationName, @NonNull TextView accommodationPrice,
-      @NonNull TextView accommodationRating, @NonNull TextView accommodationType) {
+      @NonNull TextView accommodationRating, @NonNull TextView accommodationType,
+      @NonNull MaterialButton btnBookNow) {
     this.rootView = rootView;
     this.accommodationContact = accommodationContact;
     this.accommodationDistance = accommodationDistance;
@@ -48,6 +53,7 @@ public final class ItemAccommodationBinding implements ViewBinding {
     this.accommodationPrice = accommodationPrice;
     this.accommodationRating = accommodationRating;
     this.accommodationType = accommodationType;
+    this.btnBookNow = btnBookNow;
   }
 
   @Override
@@ -113,9 +119,15 @@ public final class ItemAccommodationBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btn_book_now;
+      MaterialButton btnBookNow = ViewBindings.findChildViewById(rootView, id);
+      if (btnBookNow == null) {
+        break missingId;
+      }
+
       return new ItemAccommodationBinding((MaterialCardView) rootView, accommodationContact,
           accommodationDistance, accommodationName, accommodationPrice, accommodationRating,
-          accommodationType);
+          accommodationType, btnBookNow);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

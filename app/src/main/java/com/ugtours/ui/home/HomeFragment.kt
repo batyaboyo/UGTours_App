@@ -61,6 +61,9 @@ class HomeFragment : Fragment() {
                 is UiState.Empty -> {
                     // Hide featured section
                 }
+                UiState.Idle -> {
+                    // Initial state, do nothing
+                }
             }
         }
         

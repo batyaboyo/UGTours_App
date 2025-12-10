@@ -20,6 +20,8 @@ data class UserEntity(
     
     val email: String,
     
+    val phone: String = "",
+    
     /**
      * Hashed password - NEVER store plain text passwords
      */

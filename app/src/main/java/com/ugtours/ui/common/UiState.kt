@@ -6,6 +6,11 @@ package com.ugtours.ui.common
  */
 sealed class UiState<out T> {
     /**
+     * Idle state - initial state before any operation
+     */
+    object Idle : UiState<Nothing>()
+    
+    /**
      * Loading state - operation in progress
      */
     object Loading : UiState<Nothing>()

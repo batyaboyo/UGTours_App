@@ -6,10 +6,12 @@ import androidx.lifecycle.ViewModelProvider
 import com.ugtours.data.local.AppDatabase
 import com.ugtours.data.repository.AttractionsRepository
 import com.ugtours.data.repository.AuthRepository
+import com.ugtours.data.repository.BookingsRepository
 import com.ugtours.data.repository.UserPreferencesRepository
 import com.ugtours.ui.attractions.AttractionDetailViewModel
 import com.ugtours.ui.attractions.AttractionsViewModel
 import com.ugtours.ui.auth.AuthViewModel
+import com.ugtours.ui.bookings.BookingsViewModel
 import com.ugtours.ui.favorites.FavoritesViewModel
 import com.ugtours.ui.home.HomeViewModel
 import com.ugtours.ui.profile.ProfileViewModel
@@ -27,6 +29,7 @@ class ViewModelFactory(private val context: Context) : ViewModelProvider.Factory
         database.favoritesDao(),
         database.recentlyViewedDao()
     )
+    private val bookingsRepository = BookingsRepository(database.bookingsDao())
     private val preferencesRepository = UserPreferencesRepository(context)
     
     @Suppress("UNCHECKED_CAST")
@@ -46,6 +49,10 @@ class ViewModelFactory(private val context: Context) : ViewModelProvider.Factory
             }
             modelClass.isAssignableFrom(ProfileViewModel::class.java) -> {
                 ProfileViewModel(authRepository, attractionsRepository, preferencesRepository) as T
+            }
+            modelClass.isAssignableFrom(BookingsViewModel::class.java) -> {
+                val userId = preferencesRepository.getUserId()
+                BookingsViewModel(bookingsRepository, userId) as T
             }
             else -> throw IllegalArgumentException("Unknown ViewModel class: ${modelClass.name}")
         }

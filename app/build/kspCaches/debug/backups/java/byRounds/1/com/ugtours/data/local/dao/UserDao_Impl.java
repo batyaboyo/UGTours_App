@@ -47,7 +47,7 @@ public final class UserDao_Impl implements UserDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "INSERT OR ABORT INTO `users` (`id`,`name`,`email`,`passwordHash`,`passwordSalt`,`createdAt`,`updatedAt`) VALUES (nullif(?, 0),?,?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `users` (`id`,`name`,`email`,`phone`,`passwordHash`,`passwordSalt`,`createdAt`,`updatedAt`) VALUES (nullif(?, 0),?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -56,10 +56,11 @@ public final class UserDao_Impl implements UserDao {
         statement.bindLong(1, entity.getId());
         statement.bindString(2, entity.getName());
         statement.bindString(3, entity.getEmail());
-        statement.bindString(4, entity.getPasswordHash());
-        statement.bindString(5, entity.getPasswordSalt());
-        statement.bindLong(6, entity.getCreatedAt());
-        statement.bindLong(7, entity.getUpdatedAt());
+        statement.bindString(4, entity.getPhone());
+        statement.bindString(5, entity.getPasswordHash());
+        statement.bindString(6, entity.getPasswordSalt());
+        statement.bindLong(7, entity.getCreatedAt());
+        statement.bindLong(8, entity.getUpdatedAt());
       }
     };
     this.__deletionAdapterOfUserEntity = new EntityDeletionOrUpdateAdapter<UserEntity>(__db) {
@@ -79,7 +80,7 @@ public final class UserDao_Impl implements UserDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "UPDATE OR ABORT `users` SET `id` = ?,`name` = ?,`email` = ?,`passwordHash` = ?,`passwordSalt` = ?,`createdAt` = ?,`updatedAt` = ? WHERE `id` = ?";
+        return "UPDATE OR ABORT `users` SET `id` = ?,`name` = ?,`email` = ?,`phone` = ?,`passwordHash` = ?,`passwordSalt` = ?,`createdAt` = ?,`updatedAt` = ? WHERE `id` = ?";
       }
 
       @Override
@@ -88,11 +89,12 @@ public final class UserDao_Impl implements UserDao {
         statement.bindLong(1, entity.getId());
         statement.bindString(2, entity.getName());
         statement.bindString(3, entity.getEmail());
-        statement.bindString(4, entity.getPasswordHash());
-        statement.bindString(5, entity.getPasswordSalt());
-        statement.bindLong(6, entity.getCreatedAt());
-        statement.bindLong(7, entity.getUpdatedAt());
-        statement.bindLong(8, entity.getId());
+        statement.bindString(4, entity.getPhone());
+        statement.bindString(5, entity.getPasswordHash());
+        statement.bindString(6, entity.getPasswordSalt());
+        statement.bindLong(7, entity.getCreatedAt());
+        statement.bindLong(8, entity.getUpdatedAt());
+        statement.bindLong(9, entity.getId());
       }
     };
   }
@@ -168,6 +170,7 @@ public final class UserDao_Impl implements UserDao {
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
           final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
           final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "email");
+          final int _cursorIndexOfPhone = CursorUtil.getColumnIndexOrThrow(_cursor, "phone");
           final int _cursorIndexOfPasswordHash = CursorUtil.getColumnIndexOrThrow(_cursor, "passwordHash");
           final int _cursorIndexOfPasswordSalt = CursorUtil.getColumnIndexOrThrow(_cursor, "passwordSalt");
           final int _cursorIndexOfCreatedAt = CursorUtil.getColumnIndexOrThrow(_cursor, "createdAt");
@@ -180,6 +183,8 @@ public final class UserDao_Impl implements UserDao {
             _tmpName = _cursor.getString(_cursorIndexOfName);
             final String _tmpEmail;
             _tmpEmail = _cursor.getString(_cursorIndexOfEmail);
+            final String _tmpPhone;
+            _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
             final String _tmpPasswordHash;
             _tmpPasswordHash = _cursor.getString(_cursorIndexOfPasswordHash);
             final String _tmpPasswordSalt;
@@ -188,7 +193,7 @@ public final class UserDao_Impl implements UserDao {
             _tmpCreatedAt = _cursor.getLong(_cursorIndexOfCreatedAt);
             final long _tmpUpdatedAt;
             _tmpUpdatedAt = _cursor.getLong(_cursorIndexOfUpdatedAt);
-            _result = new UserEntity(_tmpId,_tmpName,_tmpEmail,_tmpPasswordHash,_tmpPasswordSalt,_tmpCreatedAt,_tmpUpdatedAt);
+            _result = new UserEntity(_tmpId,_tmpName,_tmpEmail,_tmpPhone,_tmpPasswordHash,_tmpPasswordSalt,_tmpCreatedAt,_tmpUpdatedAt);
           } else {
             _result = null;
           }
@@ -217,6 +222,7 @@ public final class UserDao_Impl implements UserDao {
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
           final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
           final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "email");
+          final int _cursorIndexOfPhone = CursorUtil.getColumnIndexOrThrow(_cursor, "phone");
           final int _cursorIndexOfPasswordHash = CursorUtil.getColumnIndexOrThrow(_cursor, "passwordHash");
           final int _cursorIndexOfPasswordSalt = CursorUtil.getColumnIndexOrThrow(_cursor, "passwordSalt");
           final int _cursorIndexOfCreatedAt = CursorUtil.getColumnIndexOrThrow(_cursor, "createdAt");
@@ -229,6 +235,8 @@ public final class UserDao_Impl implements UserDao {
             _tmpName = _cursor.getString(_cursorIndexOfName);
             final String _tmpEmail;
             _tmpEmail = _cursor.getString(_cursorIndexOfEmail);
+            final String _tmpPhone;
+            _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
             final String _tmpPasswordHash;
             _tmpPasswordHash = _cursor.getString(_cursorIndexOfPasswordHash);
             final String _tmpPasswordSalt;
@@ -237,7 +245,7 @@ public final class UserDao_Impl implements UserDao {
             _tmpCreatedAt = _cursor.getLong(_cursorIndexOfCreatedAt);
             final long _tmpUpdatedAt;
             _tmpUpdatedAt = _cursor.getLong(_cursorIndexOfUpdatedAt);
-            _result = new UserEntity(_tmpId,_tmpName,_tmpEmail,_tmpPasswordHash,_tmpPasswordSalt,_tmpCreatedAt,_tmpUpdatedAt);
+            _result = new UserEntity(_tmpId,_tmpName,_tmpEmail,_tmpPhone,_tmpPasswordHash,_tmpPasswordSalt,_tmpCreatedAt,_tmpUpdatedAt);
           } else {
             _result = null;
           }
@@ -293,6 +301,7 @@ public final class UserDao_Impl implements UserDao {
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
           final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
           final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "email");
+          final int _cursorIndexOfPhone = CursorUtil.getColumnIndexOrThrow(_cursor, "phone");
           final int _cursorIndexOfPasswordHash = CursorUtil.getColumnIndexOrThrow(_cursor, "passwordHash");
           final int _cursorIndexOfPasswordSalt = CursorUtil.getColumnIndexOrThrow(_cursor, "passwordSalt");
           final int _cursorIndexOfCreatedAt = CursorUtil.getColumnIndexOrThrow(_cursor, "createdAt");
@@ -306,6 +315,8 @@ public final class UserDao_Impl implements UserDao {
             _tmpName = _cursor.getString(_cursorIndexOfName);
             final String _tmpEmail;
             _tmpEmail = _cursor.getString(_cursorIndexOfEmail);
+            final String _tmpPhone;
+            _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
             final String _tmpPasswordHash;
             _tmpPasswordHash = _cursor.getString(_cursorIndexOfPasswordHash);
             final String _tmpPasswordSalt;
@@ -314,7 +325,7 @@ public final class UserDao_Impl implements UserDao {
             _tmpCreatedAt = _cursor.getLong(_cursorIndexOfCreatedAt);
             final long _tmpUpdatedAt;
             _tmpUpdatedAt = _cursor.getLong(_cursorIndexOfUpdatedAt);
-            _item = new UserEntity(_tmpId,_tmpName,_tmpEmail,_tmpPasswordHash,_tmpPasswordSalt,_tmpCreatedAt,_tmpUpdatedAt);
+            _item = new UserEntity(_tmpId,_tmpName,_tmpEmail,_tmpPhone,_tmpPasswordHash,_tmpPasswordSalt,_tmpCreatedAt,_tmpUpdatedAt);
             _result.add(_item);
           }
           return _result;

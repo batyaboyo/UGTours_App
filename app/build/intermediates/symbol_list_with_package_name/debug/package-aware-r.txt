@@ -3095,6 +3095,7 @@ drawable gradient_overlay
 drawable hero_gradient
 drawable ic_arrow_back
 drawable ic_arrow_back_black_24
+drawable ic_calendar
 drawable ic_call_answer
 drawable ic_call_answer_low
 drawable ic_call_answer_video
@@ -3263,6 +3264,7 @@ id action_bar_root
 id action_bar_spinner
 id action_bar_subtitle
 id action_bar_title
+id action_buttons
 id action_container
 id action_context_bar
 id action_divider
@@ -3277,6 +3279,7 @@ id action_mode_close_button
 id action_share
 id action_text
 id actions
+id active_bookings_count
 id activity_chooser_view_content
 id add
 id alertTitle
@@ -3310,12 +3313,18 @@ id beginOnFirstDraw
 id beginning
 id bestChoice
 id blocking
+id booking_card
+id booking_dates
+id bookings_recycler_view
 id bottom
 id bottom_navigation
 id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btn_book_now
+id btn_cancel
+id btn_confirm
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3335,9 +3344,17 @@ id chain2
 id chains
 id checkbox
 id checked
+id checkin_date
+id checkin_date_layout
+id checkout_date
+id checkout_date_layout
 id chip_all
+id chip_cancelled
+id chip_confirmed
 id chip_cultural
 id chip_national_park
+id chip_pending
+id chip_upcoming
 id chip_waterfall
 id chronometer
 id circle_center
@@ -3356,6 +3373,8 @@ id confirm_button
 id confirm_password_edit_text
 id constraint
 id contact_email
+id contact_info
+id contact_phone
 id container
 id content
 id contentPanel
@@ -3409,6 +3428,7 @@ id edit_text_id
 id elastic
 id email_edit_text
 id embed
+id empty_message
 id empty_view
 id end
 id endToStart
@@ -3430,6 +3450,7 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id filter_chips
 id fitCenter
 id fitEnd
 id fitStart
@@ -3451,6 +3472,7 @@ id graph_wrap
 id group_divider
 id grouping
 id groups
+id guests_count
 id header_title
 id hero_image
 id hide_ime_id
@@ -3567,6 +3589,7 @@ id navigation_bar_item_icon_view
 id navigation_bar_item_labels_group
 id navigation_bar_item_large_label_view
 id navigation_bar_item_small_label_view
+id navigation_bookings
 id navigation_favorites
 id navigation_header_container
 id navigation_home
@@ -3575,6 +3598,7 @@ id navigation_register
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id nights_count
 id noScroll
 id noState
 id none
@@ -3583,6 +3607,7 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id number_of_guests
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -3620,6 +3645,7 @@ id pooling_container_listener_holder_tag
 id position
 id postLayout
 id pressed
+id price_per_night
 id progress_bar
 id progress_circular
 id progress_horizontal
@@ -3684,6 +3710,7 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id special_requests
 id spline
 id split_action_bar
 id spread
@@ -3700,6 +3727,8 @@ id startToEnd
 id startVertical
 id staticLayout
 id staticPostLayout
+id stats_card
+id status_chip
 id stop
 id stretch
 id submenuarrow
@@ -3743,6 +3772,8 @@ id toggle
 id toolbar
 id top
 id topPanel
+id total_price
+id total_spent
 id touch_outside
 id transitionToEnd
 id transitionToStart
@@ -3912,7 +3943,9 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_create_booking
 layout fragment_attractions_list
+layout fragment_bookings
 layout fragment_favorites
 layout fragment_home
 layout fragment_login
@@ -3923,6 +3956,7 @@ layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_accommodation
 layout item_attraction
+layout item_booking
 layout item_category
 layout item_feature
 layout item_featured_attraction

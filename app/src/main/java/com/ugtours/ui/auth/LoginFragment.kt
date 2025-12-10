@@ -61,6 +61,9 @@ class LoginFragment : Fragment() {
                 is UiState.Empty -> {
                     setLoadingState(false)
                 }
+                UiState.Idle -> {
+                    // Initial state, do nothing
+                }
             }
         }
     }

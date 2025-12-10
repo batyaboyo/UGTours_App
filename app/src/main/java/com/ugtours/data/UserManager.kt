@@ -61,7 +61,13 @@ object UserManager {
         val userMap = usersMap[email]
         if (userMap != null && userMap["password"] == password) {
             // Login successful, save session
-            val user = User(userMap["name"] ?: "", email, password)
+            val user = User(
+                id = 0L,
+                name = userMap["name"] ?: "",
+                email = email,
+                phone = userMap["phone"] ?: "",
+                password = password
+            )
             saveUserSession(context, user)
             return true
         }

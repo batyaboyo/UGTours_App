@@ -76,6 +76,9 @@ class FavoritesFragment : Fragment() {
                 is UiState.Error -> {
                     // Handle error
                 }
+                UiState.Idle -> {
+                    // Initial state, do nothing
+                }
             }
         }
     }
